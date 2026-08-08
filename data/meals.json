@@ -388,6 +388,26 @@
       "protein": 19,
       "ldlFighter": false,
       "desc": "¾ cup low-fat cottage cheese with ⅓ cup pineapple. Old school, high protein, works."
+    },
+    {
+      "slot": "snack",
+      "title": "Crispy parmesan carrot fries",
+      "cuisine": "american",
+      "cuisineLabel": "Any",
+      "kcal": 145,
+      "protein": 9,
+      "ldlFighter": false,
+      "desc": "Carrot sticks tossed in smoked paprika, oregano, and onion powder, coated in parmesan, roasted hot at 450° until crispy. A serving is an eighth of a 7-carrot batch with a little peri peri for dipping. The parmesan carries real saturated fat, so on carrot-fries day make this your cheese for the day."
+    },
+    {
+      "slot": "dinner",
+      "title": "Greek beef wraps, roasted garlic feta sauce",
+      "cuisine": "med",
+      "cuisineLabel": "Mediterranean",
+      "kcal": 675,
+      "protein": 44,
+      "ldlFighter": false,
+      "desc": "1 lb of 93% lean ground beef with oregano and cumin, split across 3 servings: whole-wheat pita, tomato, cucumber, red onion, lettuce, and a sauce of feta, Greek yogurt, and a whole roasted garlic bulb, with a side Greek salad. The feta is the day's cheese, and this counts as the week's red-meat night unless you swap in ground turkey."
     }
   ]
 }
