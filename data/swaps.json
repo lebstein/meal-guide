@@ -1,0 +1,64 @@
+{
+  "swaps": [
+    {
+      "insteadOf": "Cocktails with liqueurs & sweet mixers",
+      "use": "Whiskey neat, on the rocks, or with soda water — and far fewer of them",
+      "why": "Liqueurs and mixers are liquid sugar on top of the alcohol",
+      "worth": "Biggest single triglyceride lever you have"
+    },
+    {
+      "insteadOf": "Bagel",
+      "use": "Whole-grain English muffin or 2 slices dense whole-grain toast",
+      "why": "A bagel is 4–5 slices of white bread in a trench coat",
+      "worth": "~180 cal/day and a blood-sugar spike"
+    },
+    {
+      "insteadOf": "American cheese",
+      "use": "Skip it, or a thin slice of sharp cheddar when it matters",
+      "why": "Sharp flavor means one slice satisfies",
+      "worth": "Direct LDL reduction"
+    },
+    {
+      "insteadOf": "White rice",
+      "use": "Half brown rice, half cauliflower rice",
+      "why": "Keeps the texture and the ritual, halves the refined starch",
+      "worth": "Triglycerides + fiber"
+    },
+    {
+      "insteadOf": "Regular pasta, big bowl",
+      "use": "Whole-wheat pasta, 1½ cups cooked, bulked with a big salad",
+      "why": "The salad fills the volume the pasta used to",
+      "worth": "Fiber + portion control in one move"
+    },
+    {
+      "insteadOf": "Butter for cooking",
+      "use": "Olive oil (or avocado oil for high heat)",
+      "why": "Same richness, opposite effect on LDL",
+      "worth": "LDL −5% territory over time"
+    },
+    {
+      "insteadOf": "80/20 ground beef",
+      "use": "93/7 turkey or 90/10 beef",
+      "why": "In chili, bolognese, and tacos you cannot tell",
+      "worth": "~10g saturated fat per serving"
+    },
+    {
+      "insteadOf": "Muffins, pastries, banana bread",
+      "use": "Oat-based versions you bake yourself, or fruit + the dark-chocolate snack",
+      "why": "You control the sugar and swap butter for oil — see Sweets strategy",
+      "worth": "Added sugar + saturated fat, both"
+    },
+    {
+      "insteadOf": "Creamy dressings & mayo",
+      "use": "Olive-oil vinaigrette, mashed avocado, Greek-yogurt-based sauces",
+      "why": "Same creaminess from better fat",
+      "worth": "Saturated fat, quietly large"
+    },
+    {
+      "insteadOf": "Sour cream & butter on potatoes",
+      "use": "Plain Greek yogurt, chives, hot sauce",
+      "why": "Tangier than sour cream, 3× the protein",
+      "worth": "Saturated fat + adds protein"
+    }
+  ]
+}

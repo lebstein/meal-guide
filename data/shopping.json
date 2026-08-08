@@ -1,0 +1,91 @@
+{
+  "categories": [
+    {
+      "category": "Proteins",
+      "items": [
+        "Chicken breast & thighs (skinless)",
+        "Salmon (fresh or frozen portions)",
+        "White fish — cod, mahi, tilapia",
+        "Shrimp (frozen bag)",
+        "93% lean ground turkey",
+        "Pork tenderloin",
+        "Sirloin or flank steak (weekly)",
+        "Turkey sausage patties",
+        "Canned tuna in olive oil",
+        "Eggs + carton of egg whites",
+        "Whey protein powder"
+      ]
+    },
+    {
+      "category": "Dairy & fridge",
+      "items": [
+        "2% plain Greek yogurt (big tub)",
+        "Low-fat cottage cheese",
+        "Sharp cheddar (block, sliced thin)",
+        "Feta crumbles",
+        "Hummus",
+        "Corn tortillas",
+        "Whole-grain English muffins",
+        "Dense whole-grain bread"
+      ]
+    },
+    {
+      "category": "Pantry — the LDL arsenal",
+      "items": [
+        "Old-fashioned rolled oats",
+        "Chia seeds",
+        "Walnuts & almonds",
+        "Natural peanut butter",
+        "Black beans, cannellini, chickpeas (canned)",
+        "Dried or canned lentils",
+        "Brown rice",
+        "Whole-wheat pasta",
+        "Extra-virgin olive oil",
+        "Popcorn kernels",
+        "85% dark chocolate"
+      ]
+    },
+    {
+      "category": "Produce (weekly)",
+      "items": [
+        "Berries (fresh or frozen)",
+        "Apples & bananas",
+        "Avocados",
+        "Broccoli, peppers, snap peas",
+        "Cabbage or slaw mix",
+        "Romaine / salad greens",
+        "Tomatoes, cucumbers, onions",
+        "Baby potatoes & sweet potatoes",
+        "Cauliflower rice (frozen)",
+        "Edamame (frozen)",
+        "Lemons & limes, garlic, ginger, scallions"
+      ]
+    },
+    {
+      "category": "Flavor — why this doesn't get boring",
+      "items": [
+        "Low-sodium soy sauce & sesame oil",
+        "Chili crisp",
+        "Rice vinegar",
+        "Salsa & hot sauces",
+        "Cumin, chili powder, smoked paprika",
+        "Dijon mustard",
+        "Capers & olives",
+        "Fresh cilantro & parsley",
+        "Reduced-sugar teriyaki"
+      ]
+    },
+    {
+      "category": "Not in the cart",
+      "items": [
+        "Bagels",
+        "American cheese",
+        "Liqueurs & cocktail mixers",
+        "Store-bought baked goods",
+        "White rice (use up what you have in blends)",
+        "Butter for everyday cooking",
+        "Creamy dressings"
+      ]
+    }
+  ]
+}

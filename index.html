@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Eating Guide</title>
+<style>
+  :root {
+    color-scheme: light;
+    --page: #f9f9f7; --surface: #fcfcfb; --ink: #0b0b0b; --ink-2: #52514e;
+    --muted: #898781; --hairline: #e1e0d9; --border: rgba(11,11,11,0.10);
+    --accent: #2a78d6; --good: #0ca30c; --good-text: #006300;
+    --serious: #ec835a; --chip-bg: #f0efec;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: dark;
+      --page: #0d0d0d; --surface: #1a1a19; --ink: #ffffff; --ink-2: #c3c2b7;
+      --muted: #898781; --hairline: #2c2c2a; --border: rgba(255,255,255,0.10);
+      --accent: #3987e5; --good: #0ca30c; --good-text: #0ca30c;
+      --serious: #ec835a; --chip-bg: #383835;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background: var(--page); color: var(--ink); line-height: 1.55; padding-bottom: 90px; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 20px; }
+  header.hero { padding: 36px 0 20px; }
+  header.hero h1 { font-size: 1.7rem; letter-spacing: -0.01em; }
+  header.hero p { color: var(--ink-2); margin-top: 6px; max-width: 62ch; }
+  .disclaimer { font-size: 0.8rem; color: var(--muted); margin-top: 10px; max-width: 70ch; }
+  nav.tabs { display: flex; gap: 4px; flex-wrap: wrap; border-bottom: 1px solid var(--hairline); position: sticky; top: 0; background: var(--page); z-index: 20; padding-top: 6px; }
+  nav.tabs button { appearance: none; border: none; background: none; cursor: pointer; font: inherit; font-size: 0.92rem; color: var(--ink-2); padding: 10px 14px; border-bottom: 2px solid transparent; border-radius: 6px 6px 0 0; }
+  nav.tabs button:hover { background: var(--chip-bg); }
+  nav.tabs button.active { color: var(--ink); font-weight: 600; border-bottom-color: var(--accent); }
+  section.panel { display: none; padding: 26px 0 40px; }
+  section.panel.active { display: block; }
+  h2 { font-size: 1.25rem; margin-bottom: 4px; }
+  h3 { font-size: 1.02rem; margin: 26px 0 10px; }
+  .lede { color: var(--ink-2); margin-bottom: 20px; max-width: 68ch; }
+  .targets { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; margin-top: 14px; }
+  .target { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; }
+  .target .num { font-size: 1.35rem; font-weight: 650; }
+  .target .what { font-size: 0.82rem; color: var(--ink-2); }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; margin-top: 12px; }
+  .card h4 { font-size: 0.98rem; margin-bottom: 4px; }
+  .card p { color: var(--ink-2); font-size: 0.92rem; }
+  .card .payoff { display: inline-block; margin-top: 8px; font-size: 0.8rem; font-weight: 600; color: var(--good-text); }
+  .filters { display: flex; gap: 8px; flex-wrap: wrap; margin: 14px 0 4px; }
+  .filters button { appearance: none; font: inherit; font-size: 0.85rem; cursor: pointer; border: 1px solid var(--border); background: var(--surface); color: var(--ink-2); padding: 5px 13px; border-radius: 20px; }
+  .filters button.active { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
+  .meal-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; margin-top: 12px; }
+  .meal { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; }
+  .meal .top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+  .meal h4 { font-size: 0.95rem; line-height: 1.3; }
+  .meal .cuisine { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; white-space: nowrap; }
+  .meal p { font-size: 0.86rem; color: var(--ink-2); flex: 1; }
+  .meal .row { display: flex; justify-content: space-between; align-items: center; margin-top: 4px; }
+  .meal .stats { font-size: 0.8rem; color: var(--muted); }
+  .meal button.add { appearance: none; font: inherit; font-size: 0.82rem; font-weight: 600; cursor: pointer; border: 1px solid var(--accent); color: var(--accent); background: none; padding: 4px 14px; border-radius: 6px; }
+  .meal button.add:hover { background: var(--accent); color: #fff; }
+  .meal button.add.added { background: var(--good); border-color: var(--good); color: #fff; }
+  .star { font-size: 0.75rem; font-weight: 600; color: var(--good-text); }
+  #tally { position: fixed; bottom: 0; left: 0; right: 0; z-index: 30; background: var(--surface); border-top: 1px solid var(--hairline); padding: 10px 20px; display: none; }
+  #tally.visible { display: block; }
+  #tally .inner { max-width: 980px; margin: 0 auto; display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+  #tally .metric { font-size: 0.9rem; color: var(--ink-2); }
+  #tally .metric strong { color: var(--ink); font-size: 1.05rem; }
+  #tally .bar { flex: 1; min-width: 140px; height: 8px; background: var(--chip-bg); border-radius: 4px; overflow: hidden; }
+  #tally .bar > div { height: 100%; background: var(--accent); border-radius: 4px; width: 0%; transition: width 0.25s; }
+  #tally .bar > div.over { background: var(--serious); }
+  #tally button { appearance: none; font: inherit; font-size: 0.82rem; cursor: pointer; border: 1px solid var(--border); background: none; color: var(--ink-2); padding: 4px 12px; border-radius: 6px; }
+  table { width: 100%; border-collapse: collapse; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; margin-top: 12px; font-size: 0.9rem; }
+  th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--hairline); vertical-align: top; }
+  th { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); font-weight: 600; }
+  tr:last-child td { border-bottom: none; }
+  td .why { display: block; font-size: 0.8rem; color: var(--muted); margin-top: 2px; }
+  ul.check { list-style: none; margin-top: 10px; }
+  ul.check li { padding: 7px 0 7px 30px; position: relative; border-bottom: 1px solid var(--hairline); font-size: 0.92rem; color: var(--ink-2); }
+  ul.check li::before { content: "✓"; position: absolute; left: 6px; color: var(--good); font-weight: 700; }
+  ul.check li:last-child { border-bottom: none; }
+  .shop-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; margin-top: 14px; }
+  .shop-grid ul { list-style: none; }
+  .shop-grid li { font-size: 0.88rem; color: var(--ink-2); padding: 4px 0 4px 24px; border-bottom: 1px solid var(--hairline); cursor: pointer; position: relative; }
+  .shop-grid li::before { content: "○"; position: absolute; left: 2px; color: var(--muted); }
+  .shop-grid li.got { text-decoration: line-through; opacity: 0.5; }
+  .shop-grid li.got::before { content: "✓"; color: var(--good); }
+  .shop-grid li:last-child { border-bottom: none; }
+  .rotation-switch { display: flex; gap: 8px; margin: 14px 0 6px; flex-wrap: wrap; }
+  .rotation-switch button { appearance: none; font: inherit; font-size: 0.9rem; font-weight: 600; cursor: pointer; border: 1px solid var(--border); background: var(--surface); color: var(--ink-2); padding: 8px 18px; border-radius: 8px; }
+  .rotation-switch button.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+  ul.steps { list-style: none; margin-top: 6px; }
+  ul.steps li { display: flex; gap: 12px; align-items: baseline; cursor: pointer; padding: 9px 6px; border-bottom: 1px solid var(--hairline); font-size: 0.92rem; color: var(--ink-2); }
+  ul.steps li:last-child { border-bottom: none; }
+  ul.steps li .t { font-variant-numeric: tabular-nums; font-weight: 650; color: var(--accent); white-space: nowrap; min-width: 44px; }
+  ul.steps li::after { content: "○"; margin-left: auto; color: var(--muted); }
+  ul.steps li.done { text-decoration: line-through; opacity: 0.55; }
+  ul.steps li.done::after { content: "✓"; color: var(--good); }
+  .outputs { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 10px; margin-top: 10px; }
+  .outputs .out { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 11px 14px; }
+  .outputs .out b { display: block; font-size: 0.9rem; color: var(--ink); }
+  .outputs .out span { font-size: 0.8rem; color: var(--muted); }
+  .toolbar { margin-top: 10px; }
+  .toolbar button { appearance: none; font: inherit; font-size: 0.82rem; cursor: pointer; border: 1px solid var(--border); background: none; color: var(--ink-2); padding: 4px 12px; border-radius: 6px; }
+  .note { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 8px; padding: 12px 16px; font-size: 0.9rem; color: var(--ink-2); margin-top: 16px; max-width: 74ch; }
+  strong { color: var(--ink); }
+  #loadError { display: none; margin: 30px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <h1>The Eating Guide</h1>
+    <p>A mix-and-match system for lowering cholesterol and weight without banning anything: build each day from pre-sized meals, batch-cook on Sundays, and let the swaps do the work. Everything on this site lives in four editable JSON files — change them and the site updates itself.</p>
+    <p class="disclaimer">Nutrition guidance, not medical advice. Anyone using this plan should keep their own physician in the loop and retest their lipid panel at 12 weeks.</p>
+  </header>
+
+  <nav class="tabs" id="tabs">
+    <button data-panel="system" class="active">The System</button>
+    <button data-panel="meals">Build a Day</button>
+    <button data-panel="batch">Batch Cook</button>
+    <button data-panel="swaps">Swaps</button>
+    <button data-panel="shopping">Shopping List</button>
+  </nav>
+
+  <div class="note" id="loadError">Couldn't load the data files. If you opened index.html straight from disk, serve it over HTTP instead (<code>python3 -m http.server</code> in this folder) — browsers block local fetch. On GitHub Pages this works automatically.</div>
+
+  <!-- ============ THE SYSTEM ============ -->
+  <section class="panel active" id="panel-system">
+    <h2>The system in one screen</h2>
+    <p class="lede">The daily targets below assume a large, active adult aiming to lose about two pounds a week — edit them in <code>data/meals.json</code> to fit yours.</p>
+    <div class="targets" id="targetStrip"></div>
+
+    <h3>The daily calorie skeleton</h3>
+    <div class="card" id="skeletonCard"></div>
+
+    <h3>The five levers, in order of impact</h3>
+    <div class="card"><h4>1. Cut alcohol to almost nothing</h4><p>The liver turns alcohol — especially with sweet mixers — directly into triglycerides, and the calories are pure surplus. This is lever one for anyone with high triglycerides.</p><span class="payoff">Triglycerides −20% or more is common</span></div>
+    <div class="card"><h4>2. Trade refined carbs for intact ones</h4><p>White rice, bagels, regular pasta, and baked goods spike blood sugar and the excess converts to triglycerides. Brown rice, whole-wheat pasta, oats, corn tortillas, and potatoes with skin do the same job with fiber attached.</p><span class="payoff">Triglycerides down, steadier hunger</span></div>
+    <div class="card"><h4>3. Swap saturated fat for unsaturated fat</h4><p>Processed cheese, butter, fatty cuts, and cream drive LDL. Olive oil, nuts, avocado, and fish are the repair crew. It's a swap, not a cut — total fat stays moderate.</p><span class="payoff">LDL −8 to −10%</span></div>
+    <div class="card"><h4>4. Add soluble fiber every single day</h4><p>Oats, beans, barley, apples, and citrus form a gel that drags cholesterol out through digestion. Oats most mornings, beans or lentils once a day.</p><span class="payoff">LDL −5 to −10%</span></div>
+    <div class="card"><h4>5. Eat fish twice a week, lose the weight</h4><p>Fatty fish delivers omega-3s that lower triglycerides directly, and every 10 pounds lost is worth roughly 5–8 points of LDL and 15–20 of triglycerides.</p><span class="payoff">Compounds every other lever</span></div>
+
+    <h3>The weekly rhythm</h3>
+    <ul class="check">
+      <li>Oats or another soluble-fiber breakfast at least 5 mornings</li>
+      <li>Beans, lentils, or edamame in at least one meal every day</li>
+      <li>Fish dinner twice a week</li>
+      <li>Red meat once a week, lean cut — rationed, not banned</li>
+      <li>A measured handful of nuts most days</li>
+      <li>Weigh in once a week, same day, same conditions</li>
+      <li>Sweets are scheduled (two real desserts a week), never grabbed</li>
+    </ul>
+  </section>
+
+  <!-- ============ BUILD A DAY ============ -->
+  <section class="panel" id="panel-meals">
+    <h2>Build a day</h2>
+    <p class="lede">Pick one breakfast, one lunch, one dinner, and two snacks — the tally bar tracks calories and protein. Your picks are remembered by this browser until you reset. Items marked <span class="star">★ LDL-fighter</span> carry the soluble fiber and omega-3s doing the heavy lifting. To add or edit meals, edit <code>data/meals.json</code>.</p>
+    <div class="filters" id="cuisineFilters"></div>
+    <div id="mealSections"></div>
+  </section>
+
+  <!-- ============ BATCH COOK ============ -->
+  <section class="panel" id="panel-batch">
+    <h2>The Sunday batch cook</h2>
+    <p class="lede">One two-hour session makes about 60% of the week automatic. Rotations alternate so week four tastes nothing like week one. Tap a step to check it off — checks are remembered by this browser. Edit rotations in <code>data/batch.json</code>.</p>
+    <div class="rotation-switch" id="rotationSwitch"></div>
+    <div id="rotationBody"></div>
+    <div class="toolbar"><button id="clearBatch">Clear this rotation's checks</button></div>
+    <h3>Batch-cook rules (every rotation)</h3>
+    <ul class="check" id="batchRules"></ul>
+  </section>
+
+  <!-- ============ SWAPS ============ -->
+  <section class="panel" id="panel-swaps">
+    <h2>The swap table</h2>
+    <p class="lede">Nothing gets banned; everything gets a stand-in that does the same job at the table. Ranked — the top rows are worth the most. Edit in <code>data/swaps.json</code>.</p>
+    <table id="swapTable"><thead><tr><th>Instead of</th><th>Use</th><th>What it's worth</th></tr></thead><tbody></tbody></table>
+  </section>
+
+  <!-- ============ SHOPPING ============ -->
+  <section class="panel" id="panel-shopping">
+    <h2>The standing shopping list</h2>
+    <p class="lede">Keep these stocked and every meal in the guide is 30 minutes away. Tap items to check them off as you shop — checks are remembered until you clear them. Edit in <code>data/shopping.json</code>.</p>
+    <div class="toolbar"><button id="clearShopping">Clear all checks</button></div>
+    <div class="shop-grid" id="shopGrid"></div>
+  </section>
+</div>
+
+<div id="tally">
+  <div class="inner">
+    <span class="metric"><strong id="tKcal">0</strong> / <span id="tKcalMax"></span> cal</span>
+    <div class="bar"><div id="kcalBar"></div></div>
+    <span class="metric"><strong id="tProtein">0</strong>g / <span id="tProteinMax"></span>g protein</span>
+    <span class="metric" id="tItems">0 items</span>
+    <button id="resetDay">Reset day</button>
+  </div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  var LS = {
+    get: function (k, fallback) { try { var v = localStorage.getItem('mealguide.' + k); return v ? JSON.parse(v) : fallback; } catch (e) { return fallback; } },
+    set: function (k, v) { try { localStorage.setItem('mealguide.' + k, JSON.stringify(v)); } catch (e) {} }
+  };
+  var esc = function (s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); };
+  var slug = function (s) { return s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); };
+
+  // Tabs
+  var tabs = document.querySelectorAll('#tabs button');
+  tabs.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      tabs.forEach(function (b) { b.classList.remove('active'); });
+      document.querySelectorAll('section.panel').forEach(function (p) { p.classList.remove('active'); });
+      btn.classList.add('active');
+      document.getElementById('panel-' + btn.dataset.panel).classList.add('active');
+      window.scrollTo({ top: 0 });
+    });
+  });
+
+  Promise.all(['meals', 'batch', 'swaps', 'shopping'].map(function (n) {
+    return fetch('data/' + n + '.json').then(function (r) { if (!r.ok) throw new Error(n); return r.json(); });
+  })).then(function (res) {
+    initMeals(res[0]);
+    initBatch(res[1]);
+    initSwaps(res[2]);
+    initShopping(res[3]);
+  }).catch(function (e) {
+    document.getElementById('loadError').style.display = 'block';
+    console.error('Data load failed:', e);
+  });
+
+  // ---------- The System + Build a Day ----------
+  function initMeals(data) {
+    var t = data.targets, sk = t.skeleton;
+    document.getElementById('targetStrip').innerHTML =
+      '<div class="target"><div class="num">' + t.calories.toLocaleString() + '</div><div class="what">calories per day</div></div>' +
+      '<div class="target"><div class="num">' + t.protein + 'g+</div><div class="what">protein (keeps muscle while losing)</div></div>' +
+      '<div class="target"><div class="num">35–40g</div><div class="what">fiber, incl. 10g+ soluble</div></div>' +
+      '<div class="target"><div class="num">&lt;15g</div><div class="what">saturated fat per day</div></div>' +
+      '<div class="target"><div class="num">&lt;25g</div><div class="what">added sugar per day</div></div>' +
+      '<div class="target"><div class="num">2/wk</div><div class="what">planned desserts, scheduled not grabbed</div></div>';
+    document.getElementById('skeletonCard').innerHTML =
+      '<p><strong>Breakfast ~' + sk.breakfast + '</strong> · <strong>Lunch ~' + sk.lunch + '</strong> · <strong>Dinner ~' + sk.dinner + '</strong> · <strong>' + sk.snacksPerDay + ' snacks ~' + (sk.snack * sk.snacksPerDay) + '</strong> · the rest is buffer for coffee extras, cooking-oil drift, and honesty. Every meal below is sized to fit this skeleton, so one pick per slot lands the day automatically.</p>';
+
+    document.getElementById('tKcalMax').textContent = t.calories.toLocaleString();
+    document.getElementById('tProteinMax').textContent = t.protein;
+
+    // cuisine filters
+    var filters = [{ id: 'all', label: 'All cuisines' }].concat(data.cuisines);
+    var fWrap = document.getElementById('cuisineFilters');
+    fWrap.innerHTML = filters.map(function (c, i) {
+      return '<button data-cuisine="' + c.id + '"' + (i === 0 ? ' class="active"' : '') + '>' + esc(c.label) + '</button>';
+    }).join('');
+
+    // meal sections
+    var slots = [
+      { id: 'breakfast', title: 'Breakfasts (~' + sk.breakfast + ' calories)' },
+      { id: 'lunch', title: 'Lunches (~' + sk.lunch + ' calories)' },
+      { id: 'dinner', title: 'Dinners (~' + sk.dinner + ' calories)' },
+      { id: 'snack', title: 'Snacks (~' + sk.snack + ' calories — pick ' + sk.snacksPerDay + ' a day)' }
+    ];
+    var saved = LS.get('day', []);
+    var html = slots.map(function (s) {
+      var cards = data.meals.filter(function (m) { return m.slot === s.id; }).map(function (m) {
+        var id = m.slot + '-' + slug(m.title);
+        var added = saved.indexOf(id) !== -1;
+        return '<div class="meal" data-id="' + id + '" data-cuisine="' + esc(m.cuisine) + '" data-any="' + (/^any$/i.test(m.cuisineLabel) ? '1' : '0') + '" data-kcal="' + m.kcal + '" data-protein="' + m.protein + '">' +
+          '<div class="top"><h4>' + esc(m.title) + (m.ldlFighter ? ' <span class="star">★ LDL-fighter</span>' : '') + '</h4><span class="cuisine">' + esc(m.cuisineLabel) + '</span></div>' +
+          '<p>' + esc(m.desc) + '</p>' +
+          '<div class="row"><span class="stats">' + m.kcal + ' cal · ' + m.protein + 'g protein</span><button class="add' + (added ? ' added' : '') + '">' + (added ? '✓ Added' : '+ Add') + '</button></div></div>';
+      }).join('');
+      return '<h3>' + esc(s.title) + '</h3><div class="meal-grid">' + cards + '</div>';
+    }).join('');
+    document.getElementById('mealSections').innerHTML = html;
+
+    // filtering
+    fWrap.querySelectorAll('button').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        fWrap.querySelectorAll('button').forEach(function (b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        var want = btn.dataset.cuisine;
+        document.querySelectorAll('.meal').forEach(function (card) {
+          card.style.display = (want === 'all' || card.dataset.cuisine === want || card.dataset.any === '1') ? '' : 'none';
+        });
+      });
+    });
+
+    // day builder with persistence
+    function computeAndRender() {
+      var picks = LS.get('day', []);
+      var kcal = 0, protein = 0;
+      picks.forEach(function (id) {
+        var card = document.querySelector('.meal[data-id="' + id + '"]');
+        if (card) { kcal += +card.dataset.kcal; protein += +card.dataset.protein; }
+      });
+      document.getElementById('tKcal').textContent = kcal.toLocaleString();
+      document.getElementById('tProtein').textContent = protein;
+      document.getElementById('tItems').textContent = picks.length + (picks.length === 1 ? ' item' : ' items');
+      var bar = document.getElementById('kcalBar');
+      bar.style.width = Math.min(100, (kcal / t.calories) * 100) + '%';
+      bar.classList.toggle('over', kcal > t.calories * 1.07);
+      document.getElementById('tally').classList.toggle('visible', picks.length > 0);
+    }
+    document.querySelectorAll('.meal button.add').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var id = btn.closest('.meal').dataset.id;
+        var picks = LS.get('day', []);
+        var i = picks.indexOf(id);
+        if (i !== -1) { picks.splice(i, 1); btn.classList.remove('added'); btn.textContent = '+ Add'; }
+        else { picks.push(id); btn.classList.add('added'); btn.textContent = '✓ Added'; }
+        LS.set('day', picks);
+        computeAndRender();
+      });
+    });
+    document.getElementById('resetDay').addEventListener('click', function () {
+      LS.set('day', []);
+      document.querySelectorAll('.meal button.add.added').forEach(function (b) { b.classList.remove('added'); b.textContent = '+ Add'; });
+      computeAndRender();
+    });
+    computeAndRender();
+  }
+
+  // ---------- Batch cook ----------
+  function initBatch(data) {
+    var sw = document.getElementById('rotationSwitch');
+    var body = document.getElementById('rotationBody');
+    var current = LS.get('rotation', data.rotations[0].id);
+    if (!data.rotations.some(function (r) { return r.id === current; })) current = data.rotations[0].id;
+
+    sw.innerHTML = data.rotations.map(function (r) {
+      return '<button data-rotation="' + esc(r.id) + '"' + (r.id === current ? ' class="active"' : '') + '>' + esc(r.name) + '</button>';
+    }).join('');
+
+    function renderRotation(id) {
+      var r = data.rotations.filter(function (x) { return x.id === id; })[0];
+      var checked = LS.get('batch.' + id, []);
+      body.innerHTML =
+        '<h3>What you\'ll have when you\'re done</h3><div class="outputs">' +
+        r.outputs.map(function (o) { return '<div class="out"><b>' + esc(o.item) + '</b><span>' + esc(o.detail) + '</span></div>'; }).join('') +
+        '</div><h3>The timeline</h3><div class="card"><ul class="steps">' +
+        r.steps.map(function (s, i) { return '<li data-i="' + i + '"' + (checked.indexOf(i) !== -1 ? ' class="done"' : '') + '><span class="t">' + esc(s.time) + '</span>' + esc(s.step) + '</li>'; }).join('') +
+        '</ul></div><h3>How the week eats</h3><div class="card"><p>' + esc(r.weekPlan) + '</p></div>';
+      body.querySelectorAll('ul.steps li').forEach(function (li) {
+        li.addEventListener('click', function () {
+          li.classList.toggle('done');
+          var arr = LS.get('batch.' + id, []);
+          var i = +li.dataset.i, at = arr.indexOf(i);
+          if (li.classList.contains('done') && at === -1) arr.push(i);
+          if (!li.classList.contains('done') && at !== -1) arr.splice(at, 1);
+          LS.set('batch.' + id, arr);
+        });
+      });
+    }
+    sw.querySelectorAll('button').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        sw.querySelectorAll('button').forEach(function (b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        current = btn.dataset.rotation;
+        LS.set('rotation', current);
+        renderRotation(current);
+      });
+    });
+    document.getElementById('clearBatch').addEventListener('click', function () {
+      LS.set('batch.' + current, []);
+      renderRotation(current);
+    });
+    document.getElementById('batchRules').innerHTML = data.rules.map(function (r) { return '<li>' + esc(r) + '</li>'; }).join('');
+    renderRotation(current);
+  }
+
+  // ---------- Swaps ----------
+  function initSwaps(data) {
+    document.querySelector('#swapTable tbody').innerHTML = data.swaps.map(function (s) {
+      return '<tr><td>' + esc(s.insteadOf) + '</td><td>' + esc(s.use) + '<span class="why">' + esc(s.why) + '</span></td><td>' + esc(s.worth) + '</td></tr>';
+    }).join('');
+  }
+
+  // ---------- Shopping ----------
+  function initShopping(data) {
+    var grid = document.getElementById('shopGrid');
+    var checked = LS.get('shopping', []);
+    grid.innerHTML = data.categories.map(function (c) {
+      return '<div class="card"><h4>' + esc(c.category) + '</h4><ul>' +
+        c.items.map(function (it) {
+          var id = slug(c.category) + '::' + slug(it);
+          return '<li data-id="' + esc(id) + '"' + (checked.indexOf(id) !== -1 ? ' class="got"' : '') + '>' + esc(it) + '</li>';
+        }).join('') + '</ul></div>';
+    }).join('');
+    grid.querySelectorAll('li').forEach(function (li) {
+      li.addEventListener('click', function () {
+        li.classList.toggle('got');
+        var arr = LS.get('shopping', []);
+        var id = li.dataset.id, at = arr.indexOf(id);
+        if (li.classList.contains('got') && at === -1) arr.push(id);
+        if (!li.classList.contains('got') && at !== -1) arr.splice(at, 1);
+        LS.set('shopping', arr);
+      });
+    });
+    document.getElementById('clearShopping').addEventListener('click', function () {
+      LS.set('shopping', []);
+      grid.querySelectorAll('li.got').forEach(function (li) { li.classList.remove('got'); });
+    });
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+{
+  "rotations": [
+    {
+      "id": "a",
+      "name": "Rotation A — Chili Week",
+      "outputs": [
+        {
+          "item": "Turkey & black bean chili",
+          "detail": "5 portions — 3 dinners, 2 lunches"
+        },
+        {
+          "item": "Grilled chicken, 2½ lbs",
+          "detail": "5 portions for salads & bowls"
+        },
+        {
+          "item": "Brown + cauliflower rice blend",
+          "detail": "5 cups, ready to reheat"
+        },
+        {
+          "item": "Overnight oats ×3 jars",
+          "detail": "Three grab-and-go breakfasts"
+        },
+        {
+          "item": "House vinaigrette, 1 jar",
+          "detail": "Olive oil, dijon, red wine vinegar"
+        },
+        {
+          "item": "Chopped vegetables + hummus cups",
+          "detail": "Snacks portioned for the week"
+        }
+      ],
+      "steps": [
+        {
+          "time": "0:00",
+          "step": "Start the rice cooker: 2½ cups dry brown rice. Preheat the grill or grill pan."
+        },
+        {
+          "time": "0:05",
+          "step": "Chili base on the stove: brown 2 lbs of 93% lean turkey, add onion, garlic, cumin, chili powder, smoked paprika."
+        },
+        {
+          "time": "0:15",
+          "step": "Into the chili pot: 2 cans black beans, 1 can kidney beans, 2 cans fire-roasted tomatoes, cup of broth. Lid on, low simmer — it needs nothing for an hour."
+        },
+        {
+          "time": "0:20",
+          "step": "Season 2½ lbs of chicken breast (salt, pepper, garlic powder, smoked paprika) and grill in batches, about 6 minutes a side."
+        },
+        {
+          "time": "0:45",
+          "step": "While chicken finishes: build 3 overnight-oats jars — ½ cup oats, 1 tbsp chia, ¾ cup Greek yogurt, splash of milk, berries on top. Fridge."
+        },
+        {
+          "time": "0:55",
+          "step": "Vinaigrette jar: ¾ cup olive oil, ¼ cup red wine vinegar, big spoon of dijon, salt, pepper, shake. Lives in the fridge door all week."
+        },
+        {
+          "time": "1:05",
+          "step": "Chop the week's vegetables: peppers, carrots, cucumbers into snack cups; slaw mix bagged; salad greens washed if needed."
+        },
+        {
+          "time": "1:25",
+          "step": "Rice is done — fold in 3 cups of frozen cauliflower rice while it's hot (the steam cooks it). Portion into 5 containers."
+        },
+        {
+          "time": "1:35",
+          "step": "Slice half the chicken for salads, cube the rest for bowls. Portion."
+        },
+        {
+          "time": "1:45",
+          "step": "Kill the chili heat, stir in a squeeze of lime. Cool 20 minutes uncovered, then portion: 3 to the fridge, 2 to the freezer."
+        },
+        {
+          "time": "2:00",
+          "step": "Label everything with the day it's for. Done — wash up while the chili cools."
+        }
+      ],
+      "weekPlan": "Breakfasts: oats jars Mon–Wed, cook fresh Thu–Sun. Lunches: chicken over greens with the vinaigrette, chicken-rice bowls with salsa, or chili — zero cooking all week. Dinners: chili nights Mon and Wed, fresh-cooked the others (fish tacos and a stir fry both take 20 minutes when the rice is already made). Snacks: the hummus cups are already portioned."
+    },
+    {
+      "id": "b",
+      "name": "Rotation B — Soup & Skillet Week",
+      "outputs": [
+        {
+          "item": "Big-pot lentil soup",
+          "detail": "5 portions — the soluble-fiber workhorse"
+        },
+        {
+          "item": "Salsa-shredded chicken",
+          "detail": "4 portions for tacos, bowls, salads"
+        },
+        {
+          "item": "Roasted vegetable tray",
+          "detail": "Peppers, broccoli, onions, sweet potato"
+        },
+        {
+          "item": "Farro or brown rice",
+          "detail": "5 portions"
+        },
+        {
+          "item": "Jammy eggs ×6",
+          "detail": "For savory oats and salads"
+        },
+        {
+          "item": "Peanut-lime dressing + vinaigrette",
+          "detail": "Asian week needs its own sauce"
+        }
+      ],
+      "steps": [
+        {
+          "time": "0:00",
+          "step": "Oven to 425°. Slow cooker or covered pot on: 2 lbs chicken breast + a jar of salsa, low heat, walk away."
+        },
+        {
+          "time": "0:05",
+          "step": "Lentil soup: sweat onion, carrot, celery, garlic in olive oil; add 2 cups green or brown lentils, cumin, a can of tomatoes, 8 cups broth. Simmer 45 minutes."
+        },
+        {
+          "time": "0:15",
+          "step": "Sheet trays in the oven: peppers, broccoli, red onion, sweet potato chunks in olive oil, salt, pepper. 25–30 minutes, one stir."
+        },
+        {
+          "time": "0:20",
+          "step": "Farro or brown rice on the stove — 2½ cups dry."
+        },
+        {
+          "time": "0:30",
+          "step": "Jammy eggs: 6 eggs, 7 minutes in boiling water, straight to ice water, peel later while soup simmers."
+        },
+        {
+          "time": "0:45",
+          "step": "Two dressings: the house vinaigrette, plus peanut-lime (3 tbsp peanut butter, lime juice, soy, water to thin, chili crisp)."
+        },
+        {
+          "time": "1:00",
+          "step": "Pull the roasted vegetables. Taste the soup, season, add a bag of spinach to wilt in."
+        },
+        {
+          "time": "1:15",
+          "step": "Shred the salsa chicken with two forks right in the pot."
+        },
+        {
+          "time": "1:30",
+          "step": "Portion everything: soup 3 fridge + 2 freezer, chicken, grains, vegetables into containers."
+        },
+        {
+          "time": "1:50",
+          "step": "Label with days. Done."
+        }
+      ],
+      "weekPlan": "Breakfasts: savory oats with a jammy egg on top (both already made), or the yogurt bowl. Lunches: lentil soup with Greek yogurt and hot sauce, or salsa chicken over grains with roasted vegetables. Dinners: salsa-chicken tacos on corn tortillas Monday, teriyaki salmon Tuesday (rice and vegetables already done — 15 minutes), Asian chopped salad with the peanut-lime dressing later in the week. Snacks: edamame from the freezer, the daily nuts."
+    }
+  ],
+  "rules": [
+    "Fish never gets batch-cooked — it turns to cat food reheated. Batch the rice and vegetables so the fish itself is a 15-minute fresh cook.",
+    "Cool hot food uncovered for 20–30 minutes before lidding, and use shallow containers — deep tubs of warm chili are how food goes bad.",
+    "Fridge life is 4 days; anything for day 5 or later goes to the freezer the same night you cook it. Chili and soup freeze happily for 3 months.",
+    "Label with the day, not just the contents — a labeled fridge removes every decision from a Tuesday night.",
+    "Dressing in a jar means the salad takes 90 seconds; no jar, no salad. Make both dressings even if you're not sure you'll use them.",
+    "If the session runs long, cut the vegetable chopping, never the chili or soup — the pot dishes carry the most meals per minute of effort."
+  ]
+}

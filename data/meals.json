@@ -1,0 +1,393 @@
+{
+  "targets": {
+    "calories": 2200,
+    "protein": 160,
+    "skeleton": {
+      "breakfast": 425,
+      "lunch": 575,
+      "dinner": 675,
+      "snack": 175,
+      "snacksPerDay": 2
+    }
+  },
+  "cuisines": [
+    {
+      "id": "asian",
+      "label": "Asian"
+    },
+    {
+      "id": "mexican",
+      "label": "Mexican"
+    },
+    {
+      "id": "med",
+      "label": "Italian / Mediterranean"
+    },
+    {
+      "id": "american",
+      "label": "American"
+    }
+  ],
+  "meals": [
+    {
+      "slot": "breakfast",
+      "title": "Your breakfast sandwich, rebuilt",
+      "cuisine": "american",
+      "cuisineLabel": "American",
+      "kcal": 420,
+      "protein": 32,
+      "ldlFighter": false,
+      "desc": "Whole-grain English muffin, 1 egg + 2 whites, turkey sausage patty, tomato, dijon. The bagel was 300+ calories of white flour and the American cheese was pure saturated fat — this keeps everything you actually taste."
+    },
+    {
+      "slot": "breakfast",
+      "title": "Breakfast \"fried rice,\" rebuilt",
+      "cuisine": "asian",
+      "cuisineLabel": "Asian",
+      "kcal": 430,
+      "protein": 24,
+      "ldlFighter": false,
+      "desc": "Half brown rice, half cauliflower rice (you won't notice), 1 egg + 2 whites, peas, carrots, scallions, 2 tsp sesame oil, low-sodium soy. Same flavor, half the starch, a third of the oil."
+    },
+    {
+      "slot": "breakfast",
+      "title": "Overnight oats",
+      "cuisine": "american",
+      "cuisineLabel": "Any",
+      "kcal": 420,
+      "protein": 22,
+      "ldlFighter": true,
+      "desc": "½ cup oats, 1 tbsp chia, ¾ cup 2% Greek yogurt, berries, 8 walnut halves, cinnamon. Assemble the night before. The single best LDL breakfast there is — beta-glucan plus omega-3s."
+    },
+    {
+      "slot": "breakfast",
+      "title": "Savory oats with a soft egg",
+      "cuisine": "asian",
+      "cuisineLabel": "Asian",
+      "kcal": 400,
+      "protein": 20,
+      "ldlFighter": true,
+      "desc": "Oats cooked in chicken broth, topped with a jammy egg, scallions, chili crisp (1 tsp), sesame. Congee energy, five minutes. For the guy who'd rather not eat \"dessert oatmeal.\""
+    },
+    {
+      "slot": "breakfast",
+      "title": "Huevos with black beans",
+      "cuisine": "mexican",
+      "cuisineLabel": "Mexican",
+      "kcal": 430,
+      "protein": 26,
+      "ldlFighter": true,
+      "desc": "1 egg + 2 whites scrambled, ½ cup black beans, 2 corn tortillas, salsa, ⅛ avocado, cilantro. Beans at breakfast is a cheat code for the daily soluble-fiber target."
+    },
+    {
+      "slot": "breakfast",
+      "title": "Smoked salmon toast",
+      "cuisine": "med",
+      "cuisineLabel": "Mediterranean",
+      "kcal": 410,
+      "protein": 27,
+      "ldlFighter": true,
+      "desc": "2 slices dense whole-grain toast, ¼ avocado mashed, 2 oz smoked salmon, tomato, capers, squeeze of lemon. Omega-3s before 9am."
+    },
+    {
+      "slot": "breakfast",
+      "title": "Greek yogurt power bowl",
+      "cuisine": "american",
+      "cuisineLabel": "Any",
+      "kcal": 420,
+      "protein": 35,
+      "ldlFighter": false,
+      "desc": "1 cup 2% Greek yogurt, ½ cup berries, ¼ cup low-sugar granola, 1 tbsp sliced almonds, drizzle of honey. The fast option for rushed mornings."
+    },
+    {
+      "slot": "breakfast",
+      "title": "Gym-morning smoothie",
+      "cuisine": "american",
+      "cuisineLabel": "Any",
+      "kcal": 430,
+      "protein": 38,
+      "ldlFighter": false,
+      "desc": "Whey protein scoop, ¼ cup oats, ½ banana, frozen berries, handful of spinach, 1 tbsp peanut butter, water or unsweetened almond milk. Drinkable on the way to the gym."
+    },
+    {
+      "slot": "lunch",
+      "title": "Big chicken & chickpea salad",
+      "cuisine": "med",
+      "cuisineLabel": "Mediterranean",
+      "kcal": 570,
+      "protein": 45,
+      "ldlFighter": true,
+      "desc": "6 oz grilled chicken, ½ cup chickpeas, cucumber, tomato, red onion, feta (2 tbsp), olive-oil vinaigrette, over romaine with a small whole-grain roll."
+    },
+    {
+      "slot": "lunch",
+      "title": "Chicken burrito bowl",
+      "cuisine": "mexican",
+      "cuisineLabel": "Mexican",
+      "kcal": 590,
+      "protein": 42,
+      "ldlFighter": true,
+      "desc": "¾ cup brown rice, ½ cup black beans, 5 oz chicken, fajita peppers and onions, salsa, 2 tbsp guacamole, no cheese, no sour cream. Better than the restaurant version and 400 calories lighter."
+    },
+    {
+      "slot": "lunch",
+      "title": "Tuna & white bean salad",
+      "cuisine": "med",
+      "cuisineLabel": "Mediterranean",
+      "kcal": 550,
+      "protein": 38,
+      "ldlFighter": true,
+      "desc": "1 can tuna in olive oil (drained), ¾ cup cannellini beans, celery, red onion, parsley, lemon, over greens with whole-grain crackers. Zero cooking, omega-3s plus soluble fiber in one bowl."
+    },
+    {
+      "slot": "lunch",
+      "title": "Asian chopped chicken salad",
+      "cuisine": "asian",
+      "cuisineLabel": "Asian",
+      "kcal": 560,
+      "protein": 40,
+      "ldlFighter": false,
+      "desc": "5 oz chicken, shredded cabbage and carrots, ¾ cup edamame, mandarin segments, scallions, peanut-lime dressing (1½ tbsp peanut butter base), crushed peanuts."
+    },
+    {
+      "slot": "lunch",
+      "title": "Turkey-avocado sandwich + soup",
+      "cuisine": "american",
+      "cuisineLabel": "American",
+      "kcal": 580,
+      "protein": 40,
+      "ldlFighter": false,
+      "desc": "Whole-grain bread, 4 oz turkey, ¼ avocado instead of mayo, mustard, lettuce, tomato, plus a cup of minestrone or vegetable soup. The deli lunch, corrected."
+    },
+    {
+      "slot": "lunch",
+      "title": "Lentil or black bean soup, upgraded",
+      "cuisine": "american",
+      "cuisineLabel": "Any",
+      "kcal": 560,
+      "protein": 35,
+      "ldlFighter": true,
+      "desc": "2 cups hearty lentil or black bean soup (batch-cook Sunday), topped with Greek yogurt and hot sauce, side salad with vinaigrette, 1 slice whole-grain bread. The single biggest soluble-fiber meal in this guide."
+    },
+    {
+      "slot": "lunch",
+      "title": "Chicken pita with hummus",
+      "cuisine": "med",
+      "cuisineLabel": "Mediterranean",
+      "kcal": 580,
+      "protein": 42,
+      "ldlFighter": false,
+      "desc": "Whole-wheat pita, 5 oz chicken, 3 tbsp hummus, cucumber-tomato salad with olive oil and lemon, pickled onions."
+    },
+    {
+      "slot": "lunch",
+      "title": "Last night's dinner, boxed",
+      "cuisine": "american",
+      "cuisineLabel": "Any",
+      "kcal": 575,
+      "protein": 45,
+      "ldlFighter": false,
+      "desc": "Cook one extra portion at dinner and lunch handles itself. Every dinner below is sized so a full leftover portion fits the lunch slot."
+    },
+    {
+      "slot": "dinner",
+      "title": "Chicken-vegetable stir fry",
+      "cuisine": "asian",
+      "cuisineLabel": "Asian",
+      "kcal": 640,
+      "protein": 48,
+      "ldlFighter": false,
+      "desc": "6 oz chicken, 3 cups broccoli/peppers/snap peas, garlic-ginger sauce, 2 tsp oil in a hot wok, ¾ cup brown rice. The workhorse — swap in any protein and vegetable you have."
+    },
+    {
+      "slot": "dinner",
+      "title": "Teriyaki salmon & edamame",
+      "cuisine": "asian",
+      "cuisineLabel": "Asian",
+      "kcal": 680,
+      "protein": 45,
+      "ldlFighter": true,
+      "desc": "6 oz salmon glazed with reduced-sugar teriyaki, ¾ cup brown rice, steamed edamame, cucumber salad with rice vinegar. One of your two weekly fish dinners."
+    },
+    {
+      "slot": "dinner",
+      "title": "Shrimp fried rice, rebuilt",
+      "cuisine": "asian",
+      "cuisineLabel": "Asian",
+      "kcal": 620,
+      "protein": 38,
+      "ldlFighter": false,
+      "desc": "Half brown rice, half cauliflower rice, 6 oz shrimp, 1 egg, peas, carrots, scallions, 1 tbsp oil total, soy and white pepper. Your favorite, engineered to fit the plan."
+    },
+    {
+      "slot": "dinner",
+      "title": "Chicken fajitas",
+      "cuisine": "mexican",
+      "cuisineLabel": "Mexican",
+      "kcal": 650,
+      "protein": 46,
+      "ldlFighter": false,
+      "desc": "6 oz chicken, charred peppers and onions, 3 corn tortillas, 2 tbsp guacamole, salsa, lime. Skip the cheese mound and sour cream — the char and lime do the work."
+    },
+    {
+      "slot": "dinner",
+      "title": "Turkey & black bean chili",
+      "cuisine": "mexican",
+      "cuisineLabel": "Mexican",
+      "kcal": 640,
+      "protein": 45,
+      "ldlFighter": true,
+      "desc": "93% lean ground turkey, two kinds of beans, fire-roasted tomatoes, real chili spices, topped with avocado and Greek yogurt. Batch-cook it — it's three dinners and two lunches."
+    },
+    {
+      "slot": "dinner",
+      "title": "Fish tacos",
+      "cuisine": "mexican",
+      "cuisineLabel": "Mexican",
+      "kcal": 620,
+      "protein": 40,
+      "ldlFighter": true,
+      "desc": "6 oz grilled cod or mahi with cumin and lime, 3 corn tortillas, cabbage slaw, yogurt-lime crema, pico de gallo. Fish dinner number two, disguised as taco night."
+    },
+    {
+      "slot": "dinner",
+      "title": "Sheet-pan salmon & potatoes",
+      "cuisine": "med",
+      "cuisineLabel": "Mediterranean",
+      "kcal": 690,
+      "protein": 45,
+      "ldlFighter": true,
+      "desc": "6 oz salmon, baby potatoes, broccoli, all roasted in olive oil with lemon and garlic. One pan, 25 minutes, nothing to think about."
+    },
+    {
+      "slot": "dinner",
+      "title": "Whole-wheat pasta bolognese",
+      "cuisine": "med",
+      "cuisineLabel": "Italian",
+      "kcal": 670,
+      "protein": 44,
+      "ldlFighter": false,
+      "desc": "1½ cups whole-wheat pasta, sauce built on 93% lean turkey or half-lean-beef, plenty of tomato, splash of red wine in the pot (not the glass), big side salad. Pasta night survives — the portion and the noodle changed, not the ritual."
+    },
+    {
+      "slot": "dinner",
+      "title": "Shrimp & white bean skillet",
+      "cuisine": "med",
+      "cuisineLabel": "Mediterranean",
+      "kcal": 660,
+      "protein": 42,
+      "ldlFighter": true,
+      "desc": "6 oz shrimp, cannellini beans, cherry tomatoes, spinach, garlic, olive oil, chili flake, with a slice of grilled whole-grain bread to mop it up. 20 minutes."
+    },
+    {
+      "slot": "dinner",
+      "title": "Grilled pork tenderloin plate",
+      "cuisine": "american",
+      "cuisineLabel": "American",
+      "kcal": 650,
+      "protein": 50,
+      "ldlFighter": false,
+      "desc": "6 oz pork tenderloin (as lean as chicken breast), roasted sweet potato, green beans with slivered almonds. Comfort food that needs no apology."
+    },
+    {
+      "slot": "dinner",
+      "title": "Turkey burger & oven fries",
+      "cuisine": "american",
+      "cuisineLabel": "American",
+      "kcal": 680,
+      "protein": 45,
+      "ldlFighter": false,
+      "desc": "6 oz turkey burger on a whole-grain bun with all the fixings, potato wedges tossed in olive oil and roasted hot, vinegar slaw on the side."
+    },
+    {
+      "slot": "dinner",
+      "title": "Steak night (once a week)",
+      "cuisine": "american",
+      "cuisineLabel": "American",
+      "kcal": 700,
+      "protein": 48,
+      "ldlFighter": false,
+      "desc": "5 oz sirloin or flank, baked potato with Greek yogurt and chives instead of butter and sour cream, asparagus. Red meat isn't banned — it's a weekly event with a lean cut."
+    },
+    {
+      "slot": "snack",
+      "title": "Apple + peanut butter",
+      "cuisine": "american",
+      "cuisineLabel": "Any",
+      "kcal": 180,
+      "protein": 4,
+      "ldlFighter": true,
+      "desc": "One apple, 1 tbsp natural peanut butter. Apple pectin is soluble fiber."
+    },
+    {
+      "slot": "snack",
+      "title": "The daily nuts",
+      "cuisine": "american",
+      "cuisineLabel": "Any",
+      "kcal": 180,
+      "protein": 6,
+      "ldlFighter": true,
+      "desc": "¼ cup almonds or walnuts, measured, not from the bag. A daily handful of nuts is one of the best-proven LDL movers there is."
+    },
+    {
+      "slot": "snack",
+      "title": "Greek yogurt + berries",
+      "cuisine": "american",
+      "cuisineLabel": "Any",
+      "kcal": 150,
+      "protein": 16,
+      "ldlFighter": false,
+      "desc": "¾ cup 2% Greek yogurt with a handful of berries. Also the answer when a dessert craving hits at 9pm."
+    },
+    {
+      "slot": "snack",
+      "title": "Hummus + vegetables",
+      "cuisine": "med",
+      "cuisineLabel": "Mediterranean",
+      "kcal": 170,
+      "protein": 6,
+      "ldlFighter": true,
+      "desc": "¼ cup hummus with carrots, cucumber, and bell pepper strips."
+    },
+    {
+      "slot": "snack",
+      "title": "Edamame with flaky salt",
+      "cuisine": "asian",
+      "cuisineLabel": "Asian",
+      "kcal": 160,
+      "protein": 14,
+      "ldlFighter": false,
+      "desc": "1 cup in-shell edamame, steamed from frozen in 4 minutes. Soy protein has its own modest LDL-lowering effect."
+    },
+    {
+      "slot": "snack",
+      "title": "Popcorn, air-popped",
+      "cuisine": "american",
+      "cuisineLabel": "Any",
+      "kcal": 130,
+      "protein": 4,
+      "ldlFighter": false,
+      "desc": "4 cups air-popped, olive oil spray, salt or Tajín. Volume for when you want to eat a lot of something."
+    },
+    {
+      "slot": "snack",
+      "title": "Dark chocolate + almonds",
+      "cuisine": "american",
+      "cuisineLabel": "Any",
+      "kcal": 170,
+      "protein": 2,
+      "ldlFighter": false,
+      "desc": "2 squares of 85% dark chocolate with 6 almonds. The planned sweet — see the Alcohol & Sweets tab for how this fits the dessert strategy."
+    },
+    {
+      "slot": "snack",
+      "title": "Cottage cheese + pineapple",
+      "cuisine": "american",
+      "cuisineLabel": "Any",
+      "kcal": 160,
+      "protein": 19,
+      "ldlFighter": false,
+      "desc": "¾ cup low-fat cottage cheese with ⅓ cup pineapple. Old school, high protein, works."
+    }
+  ]
+}
