@@ -115,6 +115,62 @@
   .toolbar button { appearance: none; font: inherit; font-size: 0.82rem; cursor: pointer; border: 1px solid var(--border); background: none; color: var(--ink-2); padding: 4px 12px; border-radius: 6px; }
   .note { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 8px; padding: 12px 16px; font-size: 0.9rem; color: var(--ink-2); margin-top: 16px; max-width: 74ch; }
   strong { color: var(--ink); }
+
+  /* Week planner */
+  .week-nav { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin: 14px 0; }
+  .week-nav button { appearance: none; font: inherit; font-size: 0.85rem; cursor: pointer; border: 1px solid var(--border); background: var(--surface); color: var(--ink-2); padding: 5px 12px; border-radius: 6px; }
+  .week-nav button:hover { background: var(--chip-bg); }
+  .wk-label { font-weight: 650; font-size: 1rem; min-width: 220px; text-align: center; }
+  .week-scroll { overflow-x: auto; }
+  .week-grid { display: grid; grid-template-columns: 84px repeat(7, minmax(112px, 1fr)); gap: 4px; min-width: 920px; padding-bottom: 4px; }
+  .wg-head { font-size: 0.8rem; font-weight: 600; color: var(--ink-2); text-align: center; padding: 6px 2px 2px; }
+  .wg-head .d { display: block; font-size: 0.72rem; color: var(--muted); font-weight: 400; }
+  .wg-head.today { color: var(--accent); }
+  .wg-slot { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); align-self: center; text-align: right; padding-right: 8px; }
+  .wg-cell { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; min-height: 64px; padding: 6px 8px; position: relative; display: flex; flex-direction: column; justify-content: center; }
+  .wg-cell .cell-meal { appearance: none; border: none; background: none; font: inherit; font-size: 0.78rem; font-weight: 600; color: var(--ink); text-align: left; cursor: pointer; padding: 0 10px 0 0; line-height: 1.25; }
+  .wg-cell .cell-meal:hover { color: var(--accent); }
+  .wg-cell .cell-macros { font-size: 0.72rem; color: var(--muted); margin-top: 3px; }
+  .wg-cell .cell-x { position: absolute; top: 3px; right: 5px; appearance: none; border: none; background: none; color: var(--muted); cursor: pointer; font-size: 0.85rem; padding: 0 2px; display: none; }
+  .wg-cell:hover .cell-x { display: block; }
+  .wg-cell .cell-add { appearance: none; border: 1px dashed var(--border); background: none; color: var(--muted); cursor: pointer; font-size: 0.95rem; border-radius: 6px; padding: 8px 0; width: 100%; }
+  .wg-cell .cell-add:hover { color: var(--accent); border-color: var(--accent); }
+  .wg-total { font-size: 0.74rem; color: var(--ink-2); text-align: center; padding: 6px 2px; }
+  .wg-total strong { font-size: 0.82rem; }
+  .wg-total.over strong { color: var(--serious); }
+  .week-summary { margin-top: 10px; font-size: 0.86rem; color: var(--ink-2); }
+
+  /* Modal */
+  #modal { position: fixed; inset: 0; background: rgba(0,0,0,0.45); z-index: 50; display: none; align-items: flex-start; justify-content: center; padding: 40px 16px; overflow-y: auto; }
+  #modal.open { display: flex; }
+  #modal .panel-box { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; max-width: 540px; width: 100%; padding: 20px 22px; position: relative; }
+  #modal .close-x { position: absolute; top: 10px; right: 12px; appearance: none; border: none; background: none; font-size: 1.15rem; color: var(--muted); cursor: pointer; }
+  #modal h3 { margin: 0 0 2px; font-size: 1.1rem; }
+  #modal .m-macros { font-size: 0.82rem; color: var(--muted); margin-bottom: 8px; }
+  #modal p.m-desc { font-size: 0.9rem; color: var(--ink-2); }
+  #modal .picker-search { width: 100%; font: inherit; font-size: 0.9rem; padding: 7px 10px; border: 1px solid var(--border); border-radius: 8px; background: var(--page); color: var(--ink); margin: 10px 0; }
+  #modal .picker-list { max-height: 55vh; overflow-y: auto; }
+  #modal .picker-item { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; width: 100%; appearance: none; background: none; border: none; border-bottom: 1px solid var(--hairline); font: inherit; font-size: 0.88rem; color: var(--ink); text-align: left; padding: 9px 4px; cursor: pointer; }
+  #modal .picker-item:hover { background: var(--chip-bg); }
+  #modal .picker-item .pm { color: var(--muted); font-size: 0.78rem; white-space: nowrap; }
+  #modal .recipe { border-top: 1px solid var(--hairline); margin-top: 10px; padding-top: 10px; }
+  #modal .recipe .serves { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+  #modal .recipe ul, #modal .recipe ol { margin: 0 0 8px 18px; font-size: 0.86rem; color: var(--ink-2); }
+  #modal .recipe li { padding: 2px 0; }
+  #modal .recipe .rhead { font-size: 0.72rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin: 4px 0 3px; }
+
+  /* Weight tracker */
+  #wtForm { display: flex; gap: 12px; flex-wrap: wrap; align-items: flex-end; }
+  #wtForm .field label { font-size: 0.76rem; color: var(--muted); display: block; margin-bottom: 3px; }
+  #wtForm input { font: inherit; padding: 7px 10px; border: 1px solid var(--border); border-radius: 8px; background: var(--page); color: var(--ink); }
+  #wtForm button { appearance: none; font: inherit; font-weight: 600; cursor: pointer; border: 1px solid var(--accent); background: var(--accent); color: #fff; padding: 8px 18px; border-radius: 8px; }
+  #wtChart svg { width: 100%; height: auto; display: block; }
+  #wtTable .del { appearance: none; border: none; background: none; color: var(--critical); cursor: pointer; font-size: 0.8rem; padding: 0; }
+  .import-label { font-size: 0.82rem; border: 1px solid var(--border); padding: 4px 12px; border-radius: 6px; cursor: pointer; color: var(--ink-2); display: inline-block; }
+  .import-label:hover { background: var(--chip-bg); }
+  .toolbar { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+
+  footer.foot { border-top: 1px solid var(--hairline); margin-top: 34px; padding: 14px 0 26px; font-size: 0.75rem; color: var(--muted); max-width: 78ch; }
   #loadError { display: none; margin: 30px 0; }
 </style>
 </head>
@@ -123,15 +179,16 @@
   <header class="hero">
     <h1>The Eating Guide</h1>
     <p>A mix-and-match system for lowering cholesterol and weight without banning anything: build each day from pre-sized meals, batch-cook on Sundays, and let the swaps do the work. Everything on this site lives in four editable JSON files — change them and the site updates itself.</p>
-    <p class="disclaimer">Nutrition guidance, not medical advice. Anyone using this plan should keep their own physician in the loop and retest their lipid panel at 12 weeks.</p>
   </header>
 
   <nav class="tabs" id="tabs">
     <button data-panel="system" class="active">The System</button>
     <button data-panel="meals">Build a Day</button>
+    <button data-panel="planner">Planner</button>
     <button data-panel="batch">Batch Cook</button>
     <button data-panel="swaps">Swaps</button>
     <button data-panel="shopping">Shopping List</button>
+    <button data-panel="weight">Weight</button>
   </nav>
 
   <div class="note" id="loadError">Couldn't load the data files. If you opened index.html straight from disk, serve it over HTTP instead (<code>python3 -m http.server</code> in this folder) — browsers block local fetch. On GitHub Pages this works automatically.</div>
@@ -197,6 +254,52 @@
     <div class="toolbar"><button id="clearShopping">Clear all checks</button></div>
     <div class="shop-grid" id="shopGrid"></div>
   </section>
+
+  <!-- ============ PLANNER ============ -->
+  <section class="panel" id="panel-planner">
+    <h2>Week planner</h2>
+    <p class="lede">Tap + in any slot to pick a meal; tap a planned meal's name for its full card and recipe, and hover for the × to clear it. Day totals run along the bottom. Every week you plan is kept in this browser — page back with the arrows to review past weeks.</p>
+    <div class="week-nav">
+      <button id="wkPrev" title="Previous week">◀</button>
+      <div class="wk-label" id="wkLabel"></div>
+      <button id="wkNext" title="Next week">▶</button>
+      <button id="wkToday">This week</button>
+      <button id="wkCopy" title="Fills empty slots from the previous week">Copy previous week</button>
+    </div>
+    <div class="week-scroll"><div class="week-grid" id="weekGrid"></div></div>
+    <div class="week-summary" id="weekSummary"></div>
+    <h3>Backup</h3>
+    <div class="toolbar">
+      <button id="exportData" class="import-label" style="font: inherit; font-size: 0.82rem;">Download backup</button>
+      <label class="import-label">Restore backup<input type="file" id="importData" accept=".json,application/json" hidden></label>
+      <span style="font-size: 0.8rem; color: var(--muted);">Plans, weight entries, and checklists live in this browser — download a backup now and then, or to move to another device.</span>
+    </div>
+  </section>
+
+  <!-- ============ WEIGHT ============ -->
+  <section class="panel" id="panel-weight">
+    <h2>Weight tracker</h2>
+    <p class="lede">Log once a week, same day, same conditions — Friday mornings work well. The trend line matters; any single weigh-in doesn't.</p>
+    <div class="targets" id="wtTiles"></div>
+    <div class="card">
+      <form id="wtForm">
+        <div class="field"><label for="wtDate">Date</label><input type="date" id="wtDate" required></div>
+        <div class="field"><label for="wtLbs">Weight (lbs)</label><input type="number" id="wtLbs" step="0.1" min="50" max="900" required placeholder="e.g. 280"></div>
+        <button type="submit">Add entry</button>
+      </form>
+    </div>
+    <div class="card"><div id="wtChart"></div></div>
+    <table id="wtTable"><thead><tr><th>Date</th><th>Weight</th><th>Change</th><th></th></tr></thead><tbody></tbody></table>
+  </section>
+
+  <footer class="foot">Nutrition guidance, not medical advice. Anyone using this plan should keep their own physician in the loop and retest their lipid panel at 12 weeks.</footer>
+</div>
+
+<div id="modal">
+  <div class="panel-box">
+    <button class="close-x" title="Close">×</button>
+    <div id="modalBody"></div>
+  </div>
 </div>
 
 <div id="tally">
@@ -238,10 +341,262 @@
     initBatch(res[1]);
     initSwaps(res[2]);
     initShopping(res[3]);
+    initPlanner(res[0]);
+    initWeight();
+    initBackup();
   }).catch(function (e) {
     document.getElementById('loadError').style.display = 'block';
     console.error('Data load failed:', e);
   });
+
+  // ---------- Modal ----------
+  var modal = document.getElementById('modal');
+  function openModal(html) { document.getElementById('modalBody').innerHTML = html; modal.classList.add('open'); }
+  function closeModal() { modal.classList.remove('open'); }
+  modal.addEventListener('click', function (e) { if (e.target === modal || e.target.closest('.close-x')) closeModal(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
+
+  function recipeBlock(m) {
+    var r = m.recipe;
+    if (!r || (!r.ingredients && !r.method)) return '';
+    return '<div class="recipe">' +
+      (r.serves ? '<div class="serves">' + esc(r.serves) + '</div>' : '') +
+      (r.ingredients ? '<div class="rhead">Ingredients</div><ul>' + r.ingredients.map(function (i) { return '<li>' + esc(i) + '</li>'; }).join('') + '</ul>' : '') +
+      (r.method ? '<div class="rhead">Method</div><ol>' + r.method.map(function (st) { return '<li>' + esc(st) + '</li>'; }).join('') + '</ol>' : '') +
+      '</div>';
+  }
+  function openMealModal(m) {
+    openModal('<h3>' + esc(m.title) + '</h3>' +
+      '<div class="m-macros">' + esc(m.cuisineLabel) + ' · ' + m.kcal + ' cal · ' + m.protein + 'g protein' + (m.ldlFighter ? ' · <span class="star">★ LDL-fighter</span>' : '') + '</div>' +
+      '<p class="m-desc">' + esc(m.desc) + '</p>' + recipeBlock(m));
+  }
+
+  // ---------- Week planner ----------
+  function initPlanner(data) {
+    var t = data.targets;
+    var mealById = {};
+    data.meals.forEach(function (m) { mealById[m.slot + '-' + slug(m.title)] = m; });
+    var DAYS = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+    var DAY_LABELS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    var SLOTS = [['breakfast', 'Breakfast'], ['lunch', 'Lunch'], ['dinner', 'Dinner'], ['snack1', 'Snack 1'], ['snack2', 'Snack 2']];
+    function slotType(row) { return row.indexOf('snack') === 0 ? 'snack' : row; }
+    function sundayOf(d) { var x = new Date(d); x.setHours(12, 0, 0, 0); x.setDate(x.getDate() - x.getDay()); return x; }
+    function fmtKey(d) { return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); }
+    var current = sundayOf(new Date());
+    function plans() { return LS.get('plans', {}); }
+
+    function render() {
+      var key = fmtKey(current);
+      var wk = plans()[key] || {};
+      var end = new Date(current); end.setDate(end.getDate() + 6);
+      var short = { month: 'short', day: 'numeric' };
+      document.getElementById('wkLabel').textContent = 'Week of ' + current.toLocaleDateString(undefined, short) + ' – ' + end.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
+      var todayIdx = fmtKey(sundayOf(new Date())) === key ? new Date().getDay() : -1;
+      var html = '<div></div>';
+      DAYS.forEach(function (d, i) {
+        var date = new Date(current); date.setDate(date.getDate() + i);
+        html += '<div class="wg-head' + (i === todayIdx ? ' today' : '') + '">' + DAY_LABELS[i] + '<span class="d">' + date.toLocaleDateString(undefined, short) + '</span></div>';
+      });
+      SLOTS.forEach(function (s) {
+        html += '<div class="wg-slot">' + s[1] + '</div>';
+        DAYS.forEach(function (d) {
+          var id = wk[d + '.' + s[0]];
+          var m = id && mealById[id];
+          html += '<div class="wg-cell" data-day="' + d + '" data-slot="' + s[0] + '">';
+          if (m) {
+            html += '<button class="cell-meal" data-id="' + id + '">' + esc(m.title) + '</button>' +
+              '<div class="cell-macros">' + m.kcal + ' cal · ' + m.protein + 'g</div>' +
+              '<button class="cell-x" title="Clear this slot">×</button>';
+          } else {
+            html += '<button class="cell-add" title="Pick a meal">+</button>';
+          }
+          html += '</div>';
+        });
+      });
+      html += '<div class="wg-slot">Day total</div>';
+      var weekK = 0, weekP = 0, daysWith = 0;
+      DAYS.forEach(function (d) {
+        var k = 0, p = 0;
+        SLOTS.forEach(function (s) { var m = mealById[wk[d + '.' + s[0]]]; if (m) { k += m.kcal; p += m.protein; } });
+        if (k) { weekK += k; weekP += p; daysWith++; }
+        html += '<div class="wg-total' + (k > t.calories * 1.07 ? ' over' : '') + '">' + (k ? '<strong>' + k.toLocaleString() + '</strong> cal<br>' + p + 'g protein' : '—') + '</div>';
+      });
+      document.getElementById('weekGrid').innerHTML = html;
+      document.getElementById('weekSummary').textContent = daysWith
+        ? 'Planned days average ' + Math.round(weekK / daysWith).toLocaleString() + ' cal and ' + Math.round(weekP / daysWith) + 'g protein, against targets of ' + t.calories.toLocaleString() + ' and ' + t.protein + 'g.'
+        : 'Nothing planned this week yet — tap + in any slot.';
+    }
+
+    document.getElementById('weekGrid').addEventListener('click', function (e) {
+      var cell = e.target.closest('.wg-cell');
+      if (!cell) return;
+      var key = fmtKey(current);
+      if (e.target.closest('.cell-x')) {
+        var p = plans();
+        if (p[key]) { delete p[key][cell.dataset.day + '.' + cell.dataset.slot]; LS.set('plans', p); render(); }
+        return;
+      }
+      var mbtn = e.target.closest('.cell-meal');
+      if (mbtn && mealById[mbtn.dataset.id]) { openMealModal(mealById[mbtn.dataset.id]); return; }
+      if (e.target.closest('.cell-add')) openPicker(cell.dataset.day, cell.dataset.slot);
+    });
+
+    function openPicker(day, slotRow) {
+      var slot = slotType(slotRow);
+      var options = data.meals.filter(function (m) { return m.slot === slot; });
+      openModal('<h3>Pick a ' + slot + '</h3>' +
+        '<input class="picker-search" placeholder="Type to filter…">' +
+        '<div class="picker-list">' + options.map(function (m) {
+          var id = m.slot + '-' + slug(m.title);
+          return '<button class="picker-item" data-id="' + id + '"><span>' + esc(m.title) + (m.ldlFighter ? ' <span class="star">★</span>' : '') + '</span><span class="pm">' + m.kcal + ' cal · ' + m.protein + 'g</span></button>';
+        }).join('') + '</div>');
+      var box = document.getElementById('modalBody');
+      var search = box.querySelector('.picker-search');
+      search.focus();
+      search.addEventListener('input', function () {
+        var q = search.value.toLowerCase();
+        box.querySelectorAll('.picker-item').forEach(function (it) { it.style.display = it.textContent.toLowerCase().indexOf(q) !== -1 ? '' : 'none'; });
+      });
+      box.querySelectorAll('.picker-item').forEach(function (it) {
+        it.addEventListener('click', function () {
+          var key = fmtKey(current);
+          var p = plans();
+          if (!p[key]) p[key] = {};
+          p[key][day + '.' + slotRow] = it.dataset.id;
+          LS.set('plans', p);
+          closeModal();
+          render();
+        });
+      });
+    }
+
+    document.getElementById('wkPrev').addEventListener('click', function () { current.setDate(current.getDate() - 7); render(); });
+    document.getElementById('wkNext').addEventListener('click', function () { current.setDate(current.getDate() + 7); render(); });
+    document.getElementById('wkToday').addEventListener('click', function () { current = sundayOf(new Date()); render(); });
+    document.getElementById('wkCopy').addEventListener('click', function () {
+      var prev = new Date(current); prev.setDate(prev.getDate() - 7);
+      var p = plans();
+      var src = p[fmtKey(prev)];
+      if (!src) return;
+      var key = fmtKey(current);
+      p[key] = p[key] || {};
+      Object.keys(src).forEach(function (k) { if (!p[key][k]) p[key][k] = src[k]; });
+      LS.set('plans', p);
+      render();
+    });
+    render();
+  }
+
+  // ---------- Weight tracker ----------
+  function initWeight() {
+    var dateInput = document.getElementById('wtDate');
+    var lbsInput = document.getElementById('wtLbs');
+    function todayStr() { var d = new Date(); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); }
+    dateInput.value = todayStr();
+    function entries() { return LS.get('weights', []).slice().sort(function (a, b) { return a.d < b.d ? -1 : 1; }); }
+    function fmtDate(s) { return new Date(s + 'T12:00').toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' }); }
+
+    function render() {
+      var es = entries();
+      var tiles = document.getElementById('wtTiles');
+      if (!es.length) {
+        tiles.innerHTML = '<div class="target"><div class="num">—</div><div class="what">no entries yet</div></div>';
+      } else {
+        var last = es[es.length - 1], first = es[0];
+        var change = last.w - first.w;
+        var days = Math.max(1, (new Date(last.d) - new Date(first.d)) / 86400000);
+        var pace = es.length > 1 ? (change / days * 7) : 0;
+        tiles.innerHTML =
+          '<div class="target"><div class="num">' + last.w.toFixed(1) + '</div><div class="what">current (lbs), ' + fmtDate(last.d) + '</div></div>' +
+          '<div class="target"><div class="num">' + (change > 0 ? '+' : '') + change.toFixed(1) + '</div><div class="what">since ' + fmtDate(first.d) + '</div></div>' +
+          '<div class="target"><div class="num">' + (es.length > 1 ? (pace > 0 ? '+' : '') + pace.toFixed(1) : '—') + '</div><div class="what">lbs per week, average</div></div>';
+      }
+      document.getElementById('wtChart').innerHTML = chartSvg(es);
+      document.querySelector('#wtTable tbody').innerHTML = es.slice().reverse().map(function (e, i, arr) {
+        var prev = arr[i + 1];
+        var delta = prev ? (e.w - prev.w) : null;
+        return '<tr><td>' + fmtDate(e.d) + '</td><td>' + e.w.toFixed(1) + ' lbs</td><td>' + (delta === null ? '—' : (delta > 0 ? '+' : '') + delta.toFixed(1)) + '</td><td><button class="del" data-d="' + e.d + '">remove</button></td></tr>';
+      }).join('');
+    }
+
+    function chartSvg(es) {
+      if (es.length < 2) return '<p style="color: var(--muted); font-size: 0.85rem; margin: 0;">Two or more entries draw the trend line.</p>';
+      var W = 700, H = 240, L = 48, R = 14, T = 14, B = 30;
+      var ws = es.map(function (e) { return e.w; });
+      var min = Math.min.apply(null, ws), max = Math.max.apply(null, ws);
+      var pad = Math.max(1.5, (max - min) * 0.15);
+      min -= pad; max += pad;
+      var d0 = new Date(es[0].d + 'T12:00').getTime(), d1 = new Date(es[es.length - 1].d + 'T12:00').getTime();
+      var span = Math.max(86400000, d1 - d0);
+      function x(e) { return L + (new Date(e.d + 'T12:00').getTime() - d0) / span * (W - L - R); }
+      function y(w) { return T + (max - w) / (max - min) * (H - T - B); }
+      var grid = '', labels = '';
+      for (var i = 0; i <= 3; i++) {
+        var val = max - (max - min) * i / 3;
+        var yy = y(val);
+        grid += '<line x1="' + L + '" y1="' + yy.toFixed(1) + '" x2="' + (W - R) + '" y2="' + yy.toFixed(1) + '" stroke="var(--hairline)" stroke-width="1"/>';
+        labels += '<text x="' + (L - 6) + '" y="' + (yy + 3.5).toFixed(1) + '" text-anchor="end" font-size="10" fill="var(--muted)">' + Math.round(val) + '</text>';
+      }
+      var pts = es.map(function (e) { return x(e).toFixed(1) + ',' + y(e.w).toFixed(1); }).join(' ');
+      var dots = es.map(function (e) {
+        var title = '<title>' + fmtDate(e.d) + ' — ' + e.w.toFixed(1) + ' lbs</title>';
+        return '<circle cx="' + x(e).toFixed(1) + '" cy="' + y(e.w).toFixed(1) + '" r="9" fill="transparent">' + title + '</circle>' +
+               '<circle cx="' + x(e).toFixed(1) + '" cy="' + y(e.w).toFixed(1) + '" r="4" fill="var(--accent)" stroke="var(--surface)" stroke-width="2">' + title + '</circle>';
+      }).join('');
+      var xlab = '<text x="' + L + '" y="' + (H - 8) + '" font-size="10" fill="var(--muted)">' + fmtDate(es[0].d) + '</text>' +
+        '<text x="' + (W - R) + '" y="' + (H - 8) + '" text-anchor="end" font-size="10" fill="var(--muted)">' + fmtDate(es[es.length - 1].d) + '</text>';
+      return '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Weight trend">' + grid + labels +
+        '<polyline points="' + pts + '" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>' + dots + xlab + '</svg>';
+    }
+
+    document.getElementById('wtForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var d = dateInput.value, w = parseFloat(lbsInput.value);
+      if (!d || !isFinite(w)) return;
+      var es = LS.get('weights', []).filter(function (x) { return x.d !== d; });
+      es.push({ d: d, w: Math.round(w * 10) / 10 });
+      LS.set('weights', es);
+      lbsInput.value = '';
+      render();
+    });
+    document.querySelector('#wtTable tbody').addEventListener('click', function (e) {
+      var btn = e.target.closest('.del');
+      if (!btn) return;
+      LS.set('weights', LS.get('weights', []).filter(function (x) { return x.d !== btn.dataset.d; }));
+      render();
+    });
+    render();
+  }
+
+  // ---------- Backup / restore ----------
+  function initBackup() {
+    document.getElementById('exportData').addEventListener('click', function () {
+      var out = {};
+      for (var i = 0; i < localStorage.length; i++) {
+        var k = localStorage.key(i);
+        if (k.indexOf('mealguide.') === 0) out[k] = localStorage.getItem(k);
+      }
+      var blob = new Blob([JSON.stringify(out, null, 2)], { type: 'application/json' });
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'meal-guide-backup.json';
+      a.click();
+      URL.revokeObjectURL(a.href);
+    });
+    document.getElementById('importData').addEventListener('change', function () {
+      var f = this.files[0];
+      if (!f) return;
+      var reader = new FileReader();
+      reader.onload = function () {
+        try {
+          var obj = JSON.parse(reader.result);
+          Object.keys(obj).forEach(function (k) { if (k.indexOf('mealguide.') === 0) localStorage.setItem(k, obj[k]); });
+          location.reload();
+        } catch (err) { console.error('Restore failed:', err); }
+      };
+      reader.readAsText(f);
+    });
+  }
 
   // ---------- The System + Build a Day ----------
   function initMeals(data) {

@@ -90,6 +90,33 @@ whatever is in the file.
 Edit `targets` in `data/meals.json` — `calories` and `protein` drive the tally
 bar, and `skeleton` drives the per-slot sizing shown in the headings.
 
+## Planner and weight tracker
+
+The **Planner** tab is a week-at-a-time calendar: five slots a day (breakfast,
+lunch, dinner, two snacks) across Sunday–Saturday. Tap + in a slot to pick a
+meal, tap a planned meal's name for its full card and recipe, and hover for
+the × to clear a slot. Day totals run along the bottom against the daily
+targets. Every week you touch is stored, so the arrows page back through your
+history; "Copy previous week" fills empty slots from the week before.
+
+The **Weight** tab logs date + weight entries, shows current / total change /
+weekly pace, and draws the trend line.
+
+All of this personal data (plans, weights, checklists, day-builder picks)
+lives in the visitor's own browser via localStorage — none of it is in the
+repo or visible to anyone else. That also means it's per-device: use
+**Download backup / Restore backup** on the Planner tab to move data between
+devices or keep a safety copy.
+
+## Using this for yourself (forks welcome)
+
+Because the site is static and all personal data stays in each visitor's
+browser, anyone can use the live site as-is — their plans and weigh-ins are
+their own and private. To adapt the system itself, fork the repo and edit the
+JSON: daily calorie/protein targets are at the top of `data/meals.json`, and
+the meals, batch rotations, swaps, and shopping list are all plain data. No
+backend, no build step, no accounts.
+
 ## Notes
 
 - Day-builder picks, batch-cook checkoffs, and shopping-list checks are saved
