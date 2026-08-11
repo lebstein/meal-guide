@@ -37,7 +37,23 @@
       "kcal": 420,
       "protein": 32,
       "ldlFighter": false,
-      "desc": "Whole-grain English muffin, 1 egg + 2 whites, turkey sausage patty, tomato, dijon. The bagel was 300+ calories of white flour and the American cheese was pure saturated fat — this keeps everything you actually taste."
+      "desc": "Whole-grain English muffin, 1 egg + 2 whites, turkey sausage patty, tomato, dijon. The bagel was 300+ calories of white flour and the American cheese was pure saturated fat — this keeps everything you actually taste.",
+      "recipe": {
+        "serves": "Serves 1",
+        "ingredients": [
+          "1 whole-grain English muffin",
+          "1 whole egg + 2 egg whites",
+          "1 turkey sausage patty",
+          "2 thick slices tomato",
+          "1 tsp dijon mustard",
+          "Black pepper, hot sauce optional"
+        ],
+        "method": [
+          "Brown the sausage patty in a nonstick pan, 2–3 minutes a side; set aside.",
+          "Beat the egg and whites, pour into the same pan, and fold into a rough square as they set.",
+          "Toast the muffin. Spread with dijon, stack sausage, egg, and tomato. Pepper and hot sauce to finish."
+        ]
+      }
     },
     {
       "slot": "breakfast",
@@ -47,7 +63,25 @@
       "kcal": 430,
       "protein": 24,
       "ldlFighter": false,
-      "desc": "Half brown rice, half cauliflower rice (you won't notice), 1 egg + 2 whites, peas, carrots, scallions, 2 tsp sesame oil, low-sodium soy. Same flavor, half the starch, a third of the oil."
+      "desc": "Half brown rice, half cauliflower rice (you won't notice), 1 egg + 2 whites, peas, carrots, scallions, 2 tsp sesame oil, low-sodium soy. Same flavor, half the starch, a third of the oil.",
+      "recipe": {
+        "serves": "Serves 1",
+        "ingredients": [
+          "¾ cup cooked brown rice, cold from the fridge",
+          "¾ cup cauliflower rice (frozen is fine)",
+          "1 whole egg + 2 egg whites, beaten",
+          "¼ cup frozen peas and carrots",
+          "1 scallion, sliced",
+          "2 tsp sesame oil",
+          "2 tsp low-sodium soy sauce, white pepper"
+        ],
+        "method": [
+          "Heat 1 tsp sesame oil in a hot pan, scramble the eggs until just set, remove.",
+          "Add the second tsp of oil, then the cauliflower rice, peas and carrots — stir-fry 2 minutes until dry.",
+          "Add the brown rice, press flat, let it sit 60 seconds to crisp, then toss.",
+          "Return the eggs, add soy, white pepper, and scallions. Off the heat, one more toss."
+        ]
+      }
     },
     {
       "slot": "breakfast",
@@ -57,7 +91,23 @@
       "kcal": 420,
       "protein": 22,
       "ldlFighter": true,
-      "desc": "½ cup oats, 1 tbsp chia, ¾ cup 2% Greek yogurt, berries, 8 walnut halves, cinnamon. Assemble the night before. The single best LDL breakfast there is — beta-glucan plus omega-3s."
+      "desc": "½ cup oats, 1 tbsp chia, ¾ cup 2% Greek yogurt, berries, 8 walnut halves, cinnamon. Assemble the night before. The single best LDL breakfast there is — beta-glucan plus omega-3s.",
+      "recipe": {
+        "serves": "Serves 1 — assemble the night before",
+        "ingredients": [
+          "½ cup old-fashioned rolled oats",
+          "1 tbsp chia seeds",
+          "¾ cup 2% Greek yogurt",
+          "⅓ cup milk (any kind)",
+          "½ cup berries",
+          "8 walnut halves, roughly broken",
+          "Big pinch of cinnamon"
+        ],
+        "method": [
+          "Stir oats, chia, yogurt, milk, and cinnamon in a jar. Lid on, fridge overnight.",
+          "In the morning, top with berries and walnuts. Keeps 3 days, so make several at once."
+        ]
+      }
     },
     {
       "slot": "breakfast",
@@ -67,7 +117,23 @@
       "kcal": 400,
       "protein": 20,
       "ldlFighter": true,
-      "desc": "Oats cooked in chicken broth, topped with a jammy egg, scallions, chili crisp (1 tsp), sesame. Congee energy, five minutes. For the guy who'd rather not eat \"dessert oatmeal.\""
+      "desc": "Oats cooked in chicken broth, topped with a jammy egg, scallions, chili crisp (1 tsp), sesame. Congee energy, five minutes. For the guy who'd rather not eat \"dessert oatmeal.\"",
+      "recipe": {
+        "serves": "Serves 1",
+        "ingredients": [
+          "½ cup old-fashioned rolled oats",
+          "1 cup low-sodium chicken broth",
+          "1 egg",
+          "1 scallion, sliced",
+          "1 tsp chili crisp",
+          "Toasted sesame seeds"
+        ],
+        "method": [
+          "Simmer oats in the broth 4–5 minutes, stirring, until creamy like congee.",
+          "Meanwhile, lower the egg into boiling water for 7 minutes, then into cold water; peel and halve.",
+          "Bowl the oats, set the jammy egg on top, finish with scallion, chili crisp, and sesame."
+        ]
+      }
     },
     {
       "slot": "breakfast",
@@ -77,7 +143,23 @@
       "kcal": 430,
       "protein": 26,
       "ldlFighter": true,
-      "desc": "1 egg + 2 whites scrambled, ½ cup black beans, 2 corn tortillas, salsa, ⅛ avocado, cilantro. Beans at breakfast is a cheat code for the daily soluble-fiber target."
+      "desc": "1 egg + 2 whites scrambled, ½ cup black beans, 2 corn tortillas, salsa, ⅛ avocado, cilantro. Beans at breakfast is a cheat code for the daily soluble-fiber target.",
+      "recipe": {
+        "serves": "Serves 1",
+        "ingredients": [
+          "1 whole egg + 2 egg whites",
+          "½ cup canned black beans, drained, warmed with a pinch of cumin",
+          "2 corn tortillas",
+          "2 tbsp salsa",
+          "⅛ avocado, sliced",
+          "Cilantro, lime wedge"
+        ],
+        "method": [
+          "Warm the tortillas in a dry pan until pliable and spotted.",
+          "Soft-scramble the egg and whites in the same pan with a little oil spray.",
+          "Load tortillas with beans and eggs, top with salsa, avocado, cilantro, and a squeeze of lime."
+        ]
+      }
     },
     {
       "slot": "breakfast",
@@ -87,7 +169,22 @@
       "kcal": 410,
       "protein": 27,
       "ldlFighter": true,
-      "desc": "2 slices dense whole-grain toast, ¼ avocado mashed, 2 oz smoked salmon, tomato, capers, squeeze of lemon. Omega-3s before 9am."
+      "desc": "2 slices dense whole-grain toast, ¼ avocado mashed, 2 oz smoked salmon, tomato, capers, squeeze of lemon. Omega-3s before 9am.",
+      "recipe": {
+        "serves": "Serves 1",
+        "ingredients": [
+          "2 slices dense whole-grain bread",
+          "¼ avocado",
+          "2 oz smoked salmon",
+          "4 thin slices tomato",
+          "1 tsp capers",
+          "Lemon, black pepper, red onion optional"
+        ],
+        "method": [
+          "Toast the bread well. Mash the avocado straight onto it with a fork.",
+          "Drape the salmon over, add tomato, capers, and onion if using. Lemon and pepper over the top."
+        ]
+      }
     },
     {
       "slot": "breakfast",
@@ -97,7 +194,20 @@
       "kcal": 420,
       "protein": 35,
       "ldlFighter": false,
-      "desc": "1 cup 2% Greek yogurt, ½ cup berries, ¼ cup low-sugar granola, 1 tbsp sliced almonds, drizzle of honey. The fast option for rushed mornings."
+      "desc": "1 cup 2% Greek yogurt, ½ cup berries, ¼ cup low-sugar granola, 1 tbsp sliced almonds, drizzle of honey. The fast option for rushed mornings.",
+      "recipe": {
+        "serves": "Serves 1",
+        "ingredients": [
+          "1 cup 2% Greek yogurt",
+          "½ cup berries",
+          "¼ cup low-sugar granola",
+          "1 tbsp sliced almonds",
+          "1 tsp honey"
+        ],
+        "method": [
+          "Yogurt in a bowl, everything else on top. Ninety seconds, done."
+        ]
+      }
     },
     {
       "slot": "breakfast",
@@ -107,7 +217,22 @@
       "kcal": 430,
       "protein": 38,
       "ldlFighter": false,
-      "desc": "Whey protein scoop, ¼ cup oats, ½ banana, frozen berries, handful of spinach, 1 tbsp peanut butter, water or unsweetened almond milk. Drinkable on the way to the gym."
+      "desc": "Whey protein scoop, ¼ cup oats, ½ banana, frozen berries, handful of spinach, 1 tbsp peanut butter, water or unsweetened almond milk. Drinkable on the way to the gym.",
+      "recipe": {
+        "serves": "Serves 1",
+        "ingredients": [
+          "1 scoop vanilla whey protein",
+          "¼ cup rolled oats",
+          "½ banana",
+          "½ cup frozen berries",
+          "Handful of spinach",
+          "1 tbsp peanut butter",
+          "10–12 oz water or unsweetened almond milk, ice"
+        ],
+        "method": [
+          "Blend the oats first to a powder, then add everything else and blend until smooth."
+        ]
+      }
     },
     {
       "slot": "lunch",
@@ -117,7 +242,23 @@
       "kcal": 570,
       "protein": 45,
       "ldlFighter": true,
-      "desc": "6 oz grilled chicken, ½ cup chickpeas, cucumber, tomato, red onion, feta (2 tbsp), olive-oil vinaigrette, over romaine with a small whole-grain roll."
+      "desc": "6 oz grilled chicken, ½ cup chickpeas, cucumber, tomato, red onion, feta (2 tbsp), olive-oil vinaigrette, over romaine with a small whole-grain roll.",
+      "recipe": {
+        "serves": "Serves 1",
+        "ingredients": [
+          "6 oz grilled chicken breast, sliced",
+          "½ cup canned chickpeas, rinsed",
+          "3 cups chopped romaine",
+          "½ cucumber, chopped; 1 tomato, chopped; ¼ red onion, sliced",
+          "2 tbsp crumbled feta",
+          "Dressing: 1 tbsp olive oil, 2 tsp red wine vinegar, ½ tsp dijon, oregano",
+          "1 small whole-grain roll"
+        ],
+        "method": [
+          "Shake the dressing in a jar.",
+          "Toss everything except the chicken and feta with the dressing, then top with chicken and feta. Roll on the side."
+        ]
+      }
     },
     {
       "slot": "lunch",
@@ -127,7 +268,22 @@
       "kcal": 590,
       "protein": 42,
       "ldlFighter": true,
-      "desc": "¾ cup brown rice, ½ cup black beans, 5 oz chicken, fajita peppers and onions, salsa, 2 tbsp guacamole, no cheese, no sour cream. Better than the restaurant version and 400 calories lighter."
+      "desc": "¾ cup brown rice, ½ cup black beans, 5 oz chicken, fajita peppers and onions, salsa, 2 tbsp guacamole, no cheese, no sour cream. Better than the restaurant version and 400 calories lighter.",
+      "recipe": {
+        "serves": "Serves 1",
+        "ingredients": [
+          "¾ cup cooked brown rice",
+          "½ cup canned black beans, warmed",
+          "5 oz cooked chicken (batch-cooked works), sliced",
+          "1 cup peppers and onions, sautéed hot with cumin and chili powder",
+          "3 tbsp salsa, 2 tbsp guacamole",
+          "Cilantro, lime"
+        ],
+        "method": [
+          "Layer rice, beans, chicken, and fajita vegetables in a bowl.",
+          "Top with salsa, guacamole, cilantro, and lime. No cheese, no sour cream — you won't miss them here."
+        ]
+      }
     },
     {
       "slot": "lunch",
@@ -137,7 +293,22 @@
       "kcal": 550,
       "protein": 38,
       "ldlFighter": true,
-      "desc": "1 can tuna in olive oil (drained), ¾ cup cannellini beans, celery, red onion, parsley, lemon, over greens with whole-grain crackers. Zero cooking, omega-3s plus soluble fiber in one bowl."
+      "desc": "1 can tuna in olive oil (drained), ¾ cup cannellini beans, celery, red onion, parsley, lemon, over greens with whole-grain crackers. Zero cooking, omega-3s plus soluble fiber in one bowl.",
+      "recipe": {
+        "serves": "Serves 1 — zero cooking",
+        "ingredients": [
+          "1 can (5 oz) tuna in olive oil, drained",
+          "¾ cup canned cannellini beans, rinsed",
+          "1 celery stalk, sliced; ¼ red onion, thin",
+          "2 tbsp chopped parsley",
+          "1 tbsp olive oil, juice of ½ lemon",
+          "3 cups salad greens, 6 whole-grain crackers"
+        ],
+        "method": [
+          "Fold tuna, beans, celery, onion, and parsley with the oil and lemon; season with pepper.",
+          "Pile onto the greens, crackers on the side."
+        ]
+      }
     },
     {
       "slot": "lunch",
@@ -147,7 +318,22 @@
       "kcal": 560,
       "protein": 40,
       "ldlFighter": false,
-      "desc": "5 oz chicken, shredded cabbage and carrots, ¾ cup edamame, mandarin segments, scallions, peanut-lime dressing (1½ tbsp peanut butter base), crushed peanuts."
+      "desc": "5 oz chicken, shredded cabbage and carrots, ¾ cup edamame, mandarin segments, scallions, peanut-lime dressing (1½ tbsp peanut butter base), crushed peanuts.",
+      "recipe": {
+        "serves": "Serves 1",
+        "ingredients": [
+          "5 oz cooked chicken, shredded",
+          "2 cups shredded cabbage + 1 shredded carrot (or slaw mix)",
+          "¾ cup shelled edamame",
+          "1 mandarin, segmented; 1 scallion",
+          "1 tbsp crushed peanuts",
+          "Dressing: 1½ tbsp peanut butter, juice of 1 lime, 2 tsp soy, 1 tsp chili crisp, water to thin"
+        ],
+        "method": [
+          "Whisk the dressing until pourable.",
+          "Toss cabbage, carrot, edamame, and chicken with most of it; top with mandarin, scallion, peanuts, and the rest."
+        ]
+      }
     },
     {
       "slot": "lunch",
@@ -157,7 +343,21 @@
       "kcal": 580,
       "protein": 40,
       "ldlFighter": false,
-      "desc": "Whole-grain bread, 4 oz turkey, ¼ avocado instead of mayo, mustard, lettuce, tomato, plus a cup of minestrone or vegetable soup. The deli lunch, corrected."
+      "desc": "Whole-grain bread, 4 oz turkey, ¼ avocado instead of mayo, mustard, lettuce, tomato, plus a cup of minestrone or vegetable soup. The deli lunch, corrected.",
+      "recipe": {
+        "serves": "Serves 1",
+        "ingredients": [
+          "2 slices whole-grain bread",
+          "4 oz sliced turkey breast",
+          "¼ avocado, mashed (this is the mayo)",
+          "Mustard, lettuce, tomato, red onion",
+          "1 cup minestrone or vegetable soup"
+        ],
+        "method": [
+          "Spread one slice with mashed avocado, the other with mustard; build the sandwich.",
+          "Heat the soup. That's lunch."
+        ]
+      }
     },
     {
       "slot": "lunch",
@@ -167,7 +367,25 @@
       "kcal": 560,
       "protein": 35,
       "ldlFighter": true,
-      "desc": "2 cups hearty lentil or black bean soup (batch-cook Sunday), topped with Greek yogurt and hot sauce, side salad with vinaigrette, 1 slice whole-grain bread. The single biggest soluble-fiber meal in this guide."
+      "desc": "2 cups hearty lentil or black bean soup (batch-cook Sunday), topped with Greek yogurt and hot sauce, side salad with vinaigrette, 1 slice whole-grain bread. The single biggest soluble-fiber meal in this guide.",
+      "recipe": {
+        "serves": "Batch — about 5 servings of 2 cups. Same recipe as Batch Cook Rotation B.",
+        "ingredients": [
+          "1 tbsp olive oil",
+          "1 onion, 2 carrots, 2 celery stalks, 4 garlic cloves — all chopped",
+          "2 cups green or brown lentils (or 3 cans black beans)",
+          "1 tsp cumin, ½ tsp smoked paprika",
+          "1 can (14 oz) diced tomatoes",
+          "8 cups low-sodium broth",
+          "1 bag spinach",
+          "Per bowl: dollop of Greek yogurt, hot sauce, 1 slice whole-grain bread, side salad"
+        ],
+        "method": [
+          "Sweat the vegetables in the oil 5 minutes; add garlic and spices for 1 more.",
+          "Add lentils, tomatoes, and broth. Simmer 40–45 minutes until tender.",
+          "Stir in the spinach to wilt, season, and portion. Serve each bowl with yogurt, hot sauce, bread, and a side salad."
+        ]
+      }
     },
     {
       "slot": "lunch",
@@ -177,7 +395,20 @@
       "kcal": 580,
       "protein": 42,
       "ldlFighter": false,
-      "desc": "Whole-wheat pita, 5 oz chicken, 3 tbsp hummus, cucumber-tomato salad with olive oil and lemon, pickled onions."
+      "desc": "Whole-wheat pita, 5 oz chicken, 3 tbsp hummus, cucumber-tomato salad with olive oil and lemon, pickled onions.",
+      "recipe": {
+        "serves": "Serves 1",
+        "ingredients": [
+          "1 whole-wheat pita",
+          "5 oz cooked chicken, sliced",
+          "3 tbsp hummus",
+          "½ cucumber + 1 tomato, chopped, with 1 tsp olive oil and lemon",
+          "Pickled red onions if you have them"
+        ],
+        "method": [
+          "Spread the hummus inside the pita, stuff with chicken and the cucumber-tomato salad."
+        ]
+      }
     },
     {
       "slot": "lunch",
@@ -197,7 +428,23 @@
       "kcal": 640,
       "protein": 48,
       "ldlFighter": false,
-      "desc": "6 oz chicken, 3 cups broccoli/peppers/snap peas, garlic-ginger sauce, 2 tsp oil in a hot wok, ¾ cup brown rice. The workhorse — swap in any protein and vegetable you have."
+      "desc": "6 oz chicken, 3 cups broccoli/peppers/snap peas, garlic-ginger sauce, 2 tsp oil in a hot wok, ¾ cup brown rice. The workhorse — swap in any protein and vegetable you have.",
+      "recipe": {
+        "serves": "Serves 2 — box the second portion for lunch",
+        "ingredients": [
+          "12 oz chicken breast, thin-sliced",
+          "6 cups vegetables: broccoli, bell pepper, snap peas",
+          "4 tsp neutral oil, divided",
+          "Sauce: 3 tbsp low-sodium soy, 3 garlic cloves minced, 1 tbsp grated ginger, 1 tsp cornstarch, ¼ cup broth or water, 1 tsp sesame oil",
+          "1½ cups cooked brown rice (¾ cup per plate)"
+        ],
+        "method": [
+          "Stir the sauce together. Get the pan or wok smoking hot.",
+          "Sear the chicken in half the oil until just cooked, 3–4 minutes; remove.",
+          "Stir-fry the vegetables in the rest of the oil 3 minutes — crisp, not soft.",
+          "Chicken back in, sauce in, toss 60 seconds until glossy. Serve over the rice."
+        ]
+      }
     },
     {
       "slot": "dinner",
@@ -207,7 +454,22 @@
       "kcal": 680,
       "protein": 45,
       "ldlFighter": true,
-      "desc": "6 oz salmon glazed with reduced-sugar teriyaki, ¾ cup brown rice, steamed edamame, cucumber salad with rice vinegar. One of your two weekly fish dinners."
+      "desc": "6 oz salmon glazed with reduced-sugar teriyaki, ¾ cup brown rice, steamed edamame, cucumber salad with rice vinegar. One of your two weekly fish dinners.",
+      "recipe": {
+        "serves": "Serves 1",
+        "ingredients": [
+          "6 oz salmon fillet",
+          "1½ tbsp reduced-sugar teriyaki sauce",
+          "¾ cup cooked brown rice",
+          "1 cup edamame in the pod, steamed",
+          "½ cucumber, sliced, with 1 tbsp rice vinegar and sesame seeds"
+        ],
+        "method": [
+          "Toss the cucumber with rice vinegar and a pinch of salt; set aside.",
+          "Pan-sear the salmon skin-side down 4 minutes, flip for 2–3, brushing with teriyaki in the last minute (broiler works too).",
+          "Plate with rice, edamame, and the cucumber salad."
+        ]
+      }
     },
     {
       "slot": "dinner",
@@ -217,7 +479,26 @@
       "kcal": 620,
       "protein": 38,
       "ldlFighter": false,
-      "desc": "Half brown rice, half cauliflower rice, 6 oz shrimp, 1 egg, peas, carrots, scallions, 1 tbsp oil total, soy and white pepper. Your favorite, engineered to fit the plan."
+      "desc": "Half brown rice, half cauliflower rice, 6 oz shrimp, 1 egg, peas, carrots, scallions, 1 tbsp oil total, soy and white pepper. Your favorite, engineered to fit the plan.",
+      "recipe": {
+        "serves": "Serves 1, generously",
+        "ingredients": [
+          "6 oz shrimp, peeled",
+          "¾ cup cooked brown rice, cold",
+          "¾ cup cauliflower rice",
+          "1 egg, beaten",
+          "⅓ cup frozen peas and carrots",
+          "2 scallions, sliced",
+          "1 tbsp neutral oil, total",
+          "2 tsp low-sodium soy, white pepper"
+        ],
+        "method": [
+          "Hot pan, half the oil: sear the shrimp 1–2 minutes a side until pink; remove.",
+          "Rest of the oil: scramble the egg, then add cauliflower rice and peas-carrots, 2 minutes.",
+          "Add brown rice, press and crisp 1 minute, then toss with soy and white pepper.",
+          "Shrimp and scallions back in, one last toss."
+        ]
+      }
     },
     {
       "slot": "dinner",
@@ -227,7 +508,23 @@
       "kcal": 650,
       "protein": 46,
       "ldlFighter": false,
-      "desc": "6 oz chicken, charred peppers and onions, 3 corn tortillas, 2 tbsp guacamole, salsa, lime. Skip the cheese mound and sour cream — the char and lime do the work."
+      "desc": "6 oz chicken, charred peppers and onions, 3 corn tortillas, 2 tbsp guacamole, salsa, lime. Skip the cheese mound and sour cream — the char and lime do the work.",
+      "recipe": {
+        "serves": "Serves 2",
+        "ingredients": [
+          "12 oz chicken breast, sliced into strips",
+          "2 bell peppers + 1 large onion, sliced",
+          "1 tbsp olive oil",
+          "Fajita spice: 1 tsp each cumin and chili powder, ½ tsp smoked paprika, ½ tsp garlic powder, salt",
+          "6 corn tortillas (3 per person)",
+          "4 tbsp guacamole, salsa, lime, cilantro"
+        ],
+        "method": [
+          "Toss the chicken in half the spice, the vegetables in the rest.",
+          "Screaming-hot cast iron: char the vegetables 4–5 minutes, remove; then the chicken 4–5 minutes.",
+          "Warm the tortillas. Build fajitas with guacamole, salsa, lime, and cilantro — the char does the work the cheese used to."
+        ]
+      }
     },
     {
       "slot": "dinner",
@@ -237,7 +534,25 @@
       "kcal": 640,
       "protein": 45,
       "ldlFighter": true,
-      "desc": "93% lean ground turkey, two kinds of beans, fire-roasted tomatoes, real chili spices, topped with avocado and Greek yogurt. Batch-cook it — it's three dinners and two lunches."
+      "desc": "93% lean ground turkey, two kinds of beans, fire-roasted tomatoes, real chili spices, topped with avocado and Greek yogurt. Batch-cook it — it's three dinners and two lunches.",
+      "recipe": {
+        "serves": "Batch — 5 servings. Same recipe as Batch Cook Rotation A.",
+        "ingredients": [
+          "2 lbs 93% lean ground turkey",
+          "1 large onion, chopped; 4 garlic cloves, minced",
+          "2 tbsp chili powder, 1 tbsp cumin, 2 tsp smoked paprika, 1 tsp oregano",
+          "2 cans black beans + 1 can kidney beans, drained",
+          "2 cans (14 oz) fire-roasted tomatoes",
+          "1 cup broth",
+          "Per bowl: ⅛ avocado and a dollop of Greek yogurt",
+          "Lime to finish"
+        ],
+        "method": [
+          "Brown the turkey in a big pot, breaking it up; add onion until soft, then garlic and spices for 1 minute.",
+          "Add beans, tomatoes, and broth. Simmer low, lid on, 45–60 minutes; it needs almost nothing from you.",
+          "Finish with lime. Serve topped with avocado and Greek yogurt. Freezes for 3 months."
+        ]
+      }
     },
     {
       "slot": "dinner",
@@ -247,7 +562,23 @@
       "kcal": 620,
       "protein": 40,
       "ldlFighter": true,
-      "desc": "6 oz grilled cod or mahi with cumin and lime, 3 corn tortillas, cabbage slaw, yogurt-lime crema, pico de gallo. Fish dinner number two, disguised as taco night."
+      "desc": "6 oz grilled cod or mahi with cumin and lime, 3 corn tortillas, cabbage slaw, yogurt-lime crema, pico de gallo. Fish dinner number two, disguised as taco night.",
+      "recipe": {
+        "serves": "Serves 1",
+        "ingredients": [
+          "6 oz cod or mahi",
+          "½ tsp each cumin and chili powder, salt, juice of ½ lime",
+          "3 corn tortillas",
+          "1 cup cabbage slaw with a splash of vinegar",
+          "Crema: 3 tbsp Greek yogurt, lime juice, pinch of salt",
+          "Pico de gallo, cilantro"
+        ],
+        "method": [
+          "Rub the fish with the spices and lime; grill or pan-sear 3 minutes a side, then flake.",
+          "Stir the crema together. Warm the tortillas.",
+          "Build: slaw, fish, crema, pico, cilantro."
+        ]
+      }
     },
     {
       "slot": "dinner",
@@ -257,7 +588,22 @@
       "kcal": 690,
       "protein": 45,
       "ldlFighter": true,
-      "desc": "6 oz salmon, baby potatoes, broccoli, all roasted in olive oil with lemon and garlic. One pan, 25 minutes, nothing to think about."
+      "desc": "6 oz salmon, baby potatoes, broccoli, all roasted in olive oil with lemon and garlic. One pan, 25 minutes, nothing to think about.",
+      "recipe": {
+        "serves": "Serves 1 — doubles cleanly",
+        "ingredients": [
+          "6 oz salmon fillet",
+          "6 oz baby potatoes, halved",
+          "2 cups broccoli florets",
+          "1 tbsp olive oil, divided",
+          "3 garlic cloves, smashed; ½ lemon; salt, pepper, oregano"
+        ],
+        "method": [
+          "Oven to 425°. Potatoes and garlic with half the oil on a sheet pan, in for 15 minutes.",
+          "Push them over; add broccoli and the salmon with the rest of the oil. Back in for 12 minutes.",
+          "Squeeze the lemon over everything, straight from the pan."
+        ]
+      }
     },
     {
       "slot": "dinner",
@@ -267,7 +613,24 @@
       "kcal": 670,
       "protein": 44,
       "ldlFighter": false,
-      "desc": "1½ cups whole-wheat pasta, sauce built on 93% lean turkey or half-lean-beef, plenty of tomato, splash of red wine in the pot (not the glass), big side salad. Pasta night survives — the portion and the noodle changed, not the ritual."
+      "desc": "1½ cups whole-wheat pasta, sauce built on 93% lean turkey or half-lean-beef, plenty of tomato, splash of red wine in the pot (not the glass), big side salad. Pasta night survives — the portion and the noodle changed, not the ritual.",
+      "recipe": {
+        "serves": "Serves 4 — sauce freezes well",
+        "ingredients": [
+          "1 lb 93% lean ground turkey (or 90/10 beef)",
+          "1 onion + 1 carrot, finely chopped; 4 garlic cloves",
+          "1 tbsp olive oil",
+          "1 can (28 oz) crushed tomatoes + 2 tbsp tomato paste",
+          "Splash of red wine (in the pot, not the glass), 1 tsp oregano, chili flake",
+          "6 oz dry whole-wheat pasta (1½ cups cooked per person)",
+          "Big salad with olive-oil vinaigrette on the side"
+        ],
+        "method": [
+          "Soften onion and carrot in the oil; add garlic, then the meat, browning well.",
+          "Tomato paste for 1 minute, wine to deglaze, then crushed tomatoes and herbs. Simmer 25+ minutes.",
+          "Cook the pasta, toss with the sauce, and serve with the salad doing half the plate's volume."
+        ]
+      }
     },
     {
       "slot": "dinner",
@@ -277,7 +640,24 @@
       "kcal": 660,
       "protein": 42,
       "ldlFighter": true,
-      "desc": "6 oz shrimp, cannellini beans, cherry tomatoes, spinach, garlic, olive oil, chili flake, with a slice of grilled whole-grain bread to mop it up. 20 minutes."
+      "desc": "6 oz shrimp, cannellini beans, cherry tomatoes, spinach, garlic, olive oil, chili flake, with a slice of grilled whole-grain bread to mop it up. 20 minutes.",
+      "recipe": {
+        "serves": "Serves 1 — 20 minutes",
+        "ingredients": [
+          "6 oz shrimp",
+          "¾ cup cannellini beans, rinsed",
+          "1 cup cherry tomatoes, halved",
+          "2 big handfuls spinach",
+          "3 garlic cloves, sliced; chili flake",
+          "1 tbsp olive oil",
+          "1 slice whole-grain bread, grilled"
+        ],
+        "method": [
+          "Warm the garlic and chili flake in the oil until fragrant; add tomatoes until they slump, 3–4 minutes.",
+          "Add beans to heat through, then the shrimp, 2 minutes a side.",
+          "Wilt the spinach in, season, and mop it all up with the grilled bread."
+        ]
+      }
     },
     {
       "slot": "dinner",
@@ -287,7 +667,22 @@
       "kcal": 650,
       "protein": 50,
       "ldlFighter": false,
-      "desc": "6 oz pork tenderloin (as lean as chicken breast), roasted sweet potato, green beans with slivered almonds. Comfort food that needs no apology."
+      "desc": "6 oz pork tenderloin (as lean as chicken breast), roasted sweet potato, green beans with slivered almonds. Comfort food that needs no apology.",
+      "recipe": {
+        "serves": "Serves 2–3 from one tenderloin",
+        "ingredients": [
+          "1 pork tenderloin (about 1 lb) — 6 oz cooked per plate",
+          "Rub: 1 tsp smoked paprika, ½ tsp garlic powder, salt, pepper",
+          "1 medium sweet potato per person",
+          "2 cups green beans per person, 1 tbsp slivered almonds",
+          "2 tsp olive oil"
+        ],
+        "method": [
+          "Rub the pork. Grill or roast at 425° for 18–22 minutes to 145° inside; rest 5 minutes before slicing.",
+          "Roast the sweet potatoes alongside (prick, 45 minutes) or microwave 6–8 minutes.",
+          "Blister the green beans in olive oil, finish with almonds and salt."
+        ]
+      }
     },
     {
       "slot": "dinner",
@@ -297,7 +692,22 @@
       "kcal": 680,
       "protein": 45,
       "ldlFighter": false,
-      "desc": "6 oz turkey burger on a whole-grain bun with all the fixings, potato wedges tossed in olive oil and roasted hot, vinegar slaw on the side."
+      "desc": "6 oz turkey burger on a whole-grain bun with all the fixings, potato wedges tossed in olive oil and roasted hot, vinegar slaw on the side.",
+      "recipe": {
+        "serves": "Serves 1",
+        "ingredients": [
+          "6 oz 93% lean ground turkey, seasoned with salt, pepper, garlic powder, worcestershire",
+          "1 whole-grain bun",
+          "Lettuce, tomato, onion, pickles, mustard",
+          "1 medium potato, cut into wedges, 2 tsp olive oil",
+          "Vinegar slaw: cabbage, splash of cider vinegar, pinch of sugar and salt"
+        ],
+        "method": [
+          "Wedges tossed in oil and salt, 425° oven for 30–35 minutes, flipping once.",
+          "Form the patty with a dimple in the middle; pan-sear 4–5 minutes a side to 165°.",
+          "Build the burger with all the fixings; slaw and fries alongside."
+        ]
+      }
     },
     {
       "slot": "dinner",
@@ -307,7 +717,22 @@
       "kcal": 700,
       "protein": 48,
       "ldlFighter": false,
-      "desc": "5 oz sirloin or flank, baked potato with Greek yogurt and chives instead of butter and sour cream, asparagus. Red meat isn't banned — it's a weekly event with a lean cut."
+      "desc": "5 oz sirloin or flank, baked potato with Greek yogurt and chives instead of butter and sour cream, asparagus. Red meat isn't banned — it's a weekly event with a lean cut.",
+      "recipe": {
+        "serves": "Serves 1",
+        "ingredients": [
+          "5 oz sirloin or flank steak",
+          "1 medium baking potato",
+          "2 tbsp Greek yogurt, chives",
+          "1 bunch asparagus, 1 tsp olive oil",
+          "Salt, pepper, garlic"
+        ],
+        "method": [
+          "Bake the potato at 425° for 50 minutes (or microwave 8, oven 10 to finish the skin).",
+          "Season the steak well; sear in a ripping-hot pan 3–4 minutes a side for medium-rare. Rest 5 minutes.",
+          "Roast or pan-blister the asparagus. Split the potato and load with Greek yogurt and chives — tangier than sour cream, three times the protein."
+        ]
+      }
     },
     {
       "slot": "snack",
@@ -357,7 +782,17 @@
       "kcal": 160,
       "protein": 14,
       "ldlFighter": false,
-      "desc": "1 cup in-shell edamame, steamed from frozen in 4 minutes. Soy protein has its own modest LDL-lowering effect."
+      "desc": "1 cup in-shell edamame, steamed from frozen in 4 minutes. Soy protein has its own modest LDL-lowering effect.",
+      "recipe": {
+        "serves": "Serves 1",
+        "ingredients": [
+          "1 cup frozen edamame in the pod",
+          "Flaky salt"
+        ],
+        "method": [
+          "Steam or microwave from frozen, 3–4 minutes. Salt while hot."
+        ]
+      }
     },
     {
       "slot": "snack",
@@ -367,7 +802,18 @@
       "kcal": 130,
       "protein": 4,
       "ldlFighter": false,
-      "desc": "4 cups air-popped, olive oil spray, salt or Tajín. Volume for when you want to eat a lot of something."
+      "desc": "4 cups air-popped, olive oil spray, salt or Tajín. Volume for when you want to eat a lot of something.",
+      "recipe": {
+        "serves": "Serves 1",
+        "ingredients": [
+          "2 tbsp popcorn kernels (makes ~4 cups)",
+          "Olive oil spray",
+          "Salt or Tajín"
+        ],
+        "method": [
+          "Air-pop (or brown-paper-bag it in the microwave, folded shut, ~2 minutes). Spray lightly, season, shake."
+        ]
+      }
     },
     {
       "slot": "snack",
@@ -397,7 +843,24 @@
       "kcal": 145,
       "protein": 9,
       "ldlFighter": false,
-      "desc": "Carrot sticks tossed in smoked paprika, oregano, and onion powder, coated in parmesan, roasted hot at 450° until crispy. A serving is an eighth of a 7-carrot batch with a little peri peri for dipping. The parmesan carries real saturated fat, so on carrot-fries day make this your cheese for the day."
+      "desc": "Carrot sticks tossed in smoked paprika, oregano, and onion powder, coated in parmesan, roasted hot at 450° until crispy. A serving is an eighth of a 7-carrot batch with a little peri peri for dipping. The parmesan carries real saturated fat, so on carrot-fries day make this your cheese for the day.",
+      "recipe": {
+        "serves": "Makes 8 servings — one serving is an eighth of the batch",
+        "ingredients": [
+          "7 medium carrots",
+          "Olive oil spray + 1–2 tsp olive oil",
+          "1 tsp each smoked paprika, dried oregano, onion powder",
+          "Red chilli flakes and salt",
+          "2 cups (200g) grated parmesan",
+          "Peri peri or hot sauce for dipping"
+        ],
+        "method": [
+          "Oven to 450°, lined tray.",
+          "Peel and cut the carrots into fries, ½–1cm thick. Coat lightly with the oil spray.",
+          "Toss with the spices, then coat each fry in the parmesan.",
+          "Single layer on the tray; bake until crisp and golden, flipping once, about 20–25 minutes. Dip and go."
+        ]
+      }
     },
     {
       "slot": "dinner",
@@ -407,7 +870,24 @@
       "kcal": 675,
       "protein": 44,
       "ldlFighter": false,
-      "desc": "1 lb of 93% lean ground beef with oregano and cumin, split across 3 servings: whole-wheat pita, tomato, cucumber, red onion, lettuce, and a sauce of feta, Greek yogurt, and a whole roasted garlic bulb, with a side Greek salad. The feta is the day's cheese, and this counts as the week's red-meat night unless you swap in ground turkey."
+      "desc": "1 lb of 93% lean ground beef with oregano and cumin, split across 3 servings: whole-wheat pita, tomato, cucumber, red onion, lettuce, and a sauce of feta, Greek yogurt, and a whole roasted garlic bulb, with a side Greek salad. The feta is the day's cheese, and this counts as the week's red-meat night unless you swap in ground turkey.",
+      "recipe": {
+        "serves": "Serves 3",
+        "ingredients": [
+          "1 lb 93% lean ground beef (or ground turkey to keep red meat for steak night)",
+          "1 tsp oregano, ½ tsp cumin, ½ tsp garlic powder, salt, pepper",
+          "Sauce: ½ cup crumbled feta, ½ cup 2% Greek yogurt, 1 whole roasted garlic bulb, 1 tbsp lemon juice",
+          "3 whole-wheat pitas",
+          "1 cup diced tomato, ½ cup cucumber, ¼ cup red onion, 1 cup shredded lettuce",
+          "Side Greek salad: tomato, cucumber, olives, 1 tbsp olive-oil vinaigrette per person"
+        ],
+        "method": [
+          "Roast the garlic: top off a bulb, drizzle of oil, wrapped at 400° for 40 minutes until golden and soft (do it ahead, or alongside a sheet-pan night).",
+          "Brown the beef with the spices, breaking it up well.",
+          "Squeeze the roasted cloves into the feta, yogurt, and lemon; mash smooth.",
+          "Load each pita with beef, vegetables, and a generous drizzle of sauce. Greek salad on the side."
+        ]
+      }
     },
     {
       "slot": "snack",
@@ -417,7 +897,24 @@
       "kcal": 160,
       "protein": 10,
       "ldlFighter": false,
-      "desc": "Oats, vanilla protein powder, peanut butter powder, a little real peanut butter and honey, pressed into a tin and topped with dark chocolate. One bar is an eighth of the batch — make them your planned sweet: batch on Sunday, one bar covers the dessert itch for 160 calories."
+      "desc": "Oats, vanilla protein powder, peanut butter powder, a little real peanut butter and honey, pressed into a tin and topped with dark chocolate. One bar is an eighth of the batch — make them your planned sweet: batch on Sunday, one bar covers the dessert itch for 160 calories.",
+      "recipe": {
+        "serves": "Makes 8 bars — batch them Sunday",
+        "ingredients": [
+          "90g rolled oats",
+          "60g vanilla protein powder",
+          "35g peanut butter powder (PB2)",
+          "20g smooth peanut butter",
+          "15g honey",
+          "60ml water, pinch of salt",
+          "Topping: 60g dark chocolate chips melted with 5g coconut oil"
+        ],
+        "method": [
+          "Mix oats, protein powder, PB2, peanut butter, honey, water, and salt into a stiff dough.",
+          "Press firmly into a lined loaf tin.",
+          "Pour over the melted chocolate, spread thin, chill 1 hour, slice into 8."
+        ]
+      }
     }
   ]
 }
