@@ -60,6 +60,18 @@
   .meal button.add:hover { background: var(--accent); color: #fff; }
   .meal button.add.added { background: var(--good); border-color: var(--good); color: #fff; }
   .star { font-size: 0.75rem; font-weight: 600; color: var(--good-text); }
+  .meal h4.has-recipe { cursor: pointer; }
+  .meal h4.has-recipe:hover { color: var(--accent); }
+  .recipe-toggle {
+    appearance: none; font: inherit; font-size: 0.8rem; font-weight: 600; cursor: pointer;
+    border: none; background: none; color: var(--accent); padding: 0; text-align: left;
+  }
+  .recipe-toggle:hover { text-decoration: underline; }
+  .meal .recipe { border-top: 1px solid var(--hairline); margin-top: 6px; padding-top: 8px; }
+  .meal .recipe .serves { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+  .meal .recipe ul, .meal .recipe ol { margin: 0 0 8px 18px; font-size: 0.84rem; color: var(--ink-2); }
+  .meal .recipe li { padding: 2px 0; }
+  .meal .recipe .rhead { font-size: 0.72rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin: 4px 0 3px; }
   #tally { position: fixed; bottom: 0; left: 0; right: 0; z-index: 30; background: var(--surface); border-top: 1px solid var(--hairline); padding: 10px 20px; display: none; }
   #tally.visible { display: block; }
   #tally .inner { max-width: 980px; margin: 0 auto; display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
@@ -155,7 +167,7 @@
   <!-- ============ BUILD A DAY ============ -->
   <section class="panel" id="panel-meals">
     <h2>Build a day</h2>
-    <p class="lede">Pick one breakfast, one lunch, one dinner, and two snacks — the tally bar tracks calories and protein. Your picks are remembered by this browser until you reset. Items marked <span class="star">★ LDL-fighter</span> carry the soluble fiber and omega-3s doing the heavy lifting. To add or edit meals, edit <code>data/meals.json</code>.</p>
+    <p class="lede">Pick one breakfast, one lunch, one dinner, and two snacks — the tally bar tracks calories and protein. Your picks are remembered by this browser until you reset. Items marked <span class="star">★ LDL-fighter</span> carry the soluble fiber and omega-3s doing the heavy lifting. Click a meal's name (or the Recipe link) for the full ingredients and method — cards without one need no recipe. To add or edit meals, edit <code>data/meals.json</code>.</p>
     <div class="filters" id="cuisineFilters"></div>
     <div id="mealSections"></div>
   </section>
@@ -266,9 +278,20 @@
       var cards = data.meals.filter(function (m) { return m.slot === s.id; }).map(function (m) {
         var id = m.slot + '-' + slug(m.title);
         var added = saved.indexOf(id) !== -1;
+        var r = m.recipe;
+        var hasRecipe = r && (r.ingredients || r.method);
+        var recipeHtml = '';
+        if (hasRecipe) {
+          recipeHtml = '<button class="recipe-toggle">Recipe ▸</button><div class="recipe" hidden>' +
+            (r.serves ? '<div class="serves">' + esc(r.serves) + '</div>' : '') +
+            (r.ingredients ? '<div class="rhead">Ingredients</div><ul>' + r.ingredients.map(function (i) { return '<li>' + esc(i) + '</li>'; }).join('') + '</ul>' : '') +
+            (r.method ? '<div class="rhead">Method</div><ol>' + r.method.map(function (st) { return '<li>' + esc(st) + '</li>'; }).join('') + '</ol>' : '') +
+            '</div>';
+        }
         return '<div class="meal" data-id="' + id + '" data-cuisine="' + esc(m.cuisine) + '" data-any="' + (/^any$/i.test(m.cuisineLabel) ? '1' : '0') + '" data-kcal="' + m.kcal + '" data-protein="' + m.protein + '">' +
-          '<div class="top"><h4>' + esc(m.title) + (m.ldlFighter ? ' <span class="star">★ LDL-fighter</span>' : '') + '</h4><span class="cuisine">' + esc(m.cuisineLabel) + '</span></div>' +
+          '<div class="top"><h4' + (hasRecipe ? ' class="has-recipe" title="Click for the recipe"' : '') + '>' + esc(m.title) + (m.ldlFighter ? ' <span class="star">★ LDL-fighter</span>' : '') + '</h4><span class="cuisine">' + esc(m.cuisineLabel) + '</span></div>' +
           '<p>' + esc(m.desc) + '</p>' +
+          recipeHtml +
           '<div class="row"><span class="stats">' + m.kcal + ' cal · ' + m.protein + 'g protein</span><button class="add' + (added ? ' added' : '') + '">' + (added ? '✓ Added' : '+ Add') + '</button></div></div>';
       }).join('');
       return '<h3>' + esc(s.title) + '</h3><div class="meal-grid">' + cards + '</div>';
@@ -285,6 +308,18 @@
           card.style.display = (want === 'all' || card.dataset.cuisine === want || card.dataset.any === '1') ? '' : 'none';
         });
       });
+    });
+
+    // recipe expand/collapse — on the toggle or the card title
+    document.getElementById('mealSections').addEventListener('click', function (e) {
+      var trigger = e.target.closest('.recipe-toggle, h4.has-recipe');
+      if (!trigger) return;
+      var card = trigger.closest('.meal');
+      var box = card.querySelector('.recipe');
+      var btn = card.querySelector('.recipe-toggle');
+      if (!box) return;
+      box.hidden = !box.hidden;
+      if (btn) btn.textContent = box.hidden ? 'Recipe ▸' : 'Recipe ▾';
     });
 
     // day builder with persistence

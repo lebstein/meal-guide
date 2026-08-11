@@ -56,6 +56,24 @@ an `id` in the `cuisines` list at the top of the file (or use any id and set
 `cuisineLabel` to `"Any"` to show it under every filter). `ldlFighter` marks
 the ★ badge for meals heavy in soluble fiber or omega-3s.
 
+### Adding a recipe to a meal
+
+Add an optional `recipe` object to any meal and the card gets a click-to-expand
+recipe (the meal title and a "Recipe" link both toggle it):
+
+```json
+"recipe": {
+  "serves": "Serves 1",
+  "ingredients": ["6 oz shrimp", "1 tbsp olive oil"],
+  "method": ["Sear the shrimp.", "Plate it."]
+}
+```
+
+All three fields are optional — `serves` is a short line above the lists,
+`ingredients` renders as a bulleted list, `method` as numbered steps. Omit the
+`recipe` object entirely for assembly snacks where the description already says
+it all (the card then shows no recipe link).
+
 Meal sizing convention: breakfasts ~425 cal, lunches ~575, dinners ~675,
 snacks ~175, so that one pick per slot plus two snacks lands the day at the
 calorie target without counting.
