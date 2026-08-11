@@ -408,6 +408,16 @@
       "protein": 44,
       "ldlFighter": false,
       "desc": "1 lb of 93% lean ground beef with oregano and cumin, split across 3 servings: whole-wheat pita, tomato, cucumber, red onion, lettuce, and a sauce of feta, Greek yogurt, and a whole roasted garlic bulb, with a side Greek salad. The feta is the day's cheese, and this counts as the week's red-meat night unless you swap in ground turkey."
+    },
+    {
+      "slot": "snack",
+      "title": "High-protein chocolate oat bars",
+      "cuisine": "american",
+      "cuisineLabel": "Any",
+      "kcal": 160,
+      "protein": 10,
+      "ldlFighter": false,
+      "desc": "Oats, vanilla protein powder, peanut butter powder, a little real peanut butter and honey, pressed into a tin and topped with dark chocolate. One bar is an eighth of the batch — make them your planned sweet: batch on Sunday, one bar covers the dessert itch for 160 calories."
     }
   ]
 }
